@@ -50,3 +50,45 @@ information about configuration options).
 That's it for the setup, now start `grooved`:
 
 .. code-block:: bash
+
+   $ grooved
+
+You can now control it using the *groovectl* command:
+
+.. code-block:: bash
+
+   $ groovectl toggle                           # toggle playback
+   $ groovectl status                           # print the player's current status
+   $ groovectl add file.mp3                     # add files to the tracklist
+   $ groovectl next                             # skip to next track
+   $ groovectl add http://example.com/stream    # add network stream to tracklist
+   $ groovectl quit                             # terminate grooved
+
+You can also use beets to search for songs in your library and add them to the
+grooved tracklist as follows:
+
+.. code-block:: bash
+
+   $ beet ls -p song title | groovectl add -
+
+You can use beets' `query syntax`_  for more advanced queries to
+the database.
+
+Alternatively you can use beets' `play plugin`_ to automatically add the files
+(note that at least beets v1.3.7 is required for this). First, `enable the play
+plugin`_ and add the following section to your configuration file:
+
+.. code-block:: yaml
+
+   play:
+       command: groovectl --append load
+
+then use the `beet play` command to search for tracks:
+
+.. code-block:: bash
+
+   $ beet play song title
+
+the matching tracks will be automatically added to grooved's tracklist. You can
+use beets' `query syntax`_ for more advanced queries to the database with the
+`play` command as well.
