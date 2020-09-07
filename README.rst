@@ -92,3 +92,36 @@ then use the `beet play` command to search for tracks:
 the matching tracks will be automatically added to grooved's tracklist. You can
 use beets' `query syntax`_ for more advanced queries to the database with the
 `play` command as well.
+
+See grooved_ and groovectl_ for more information.
+
+.. _`install and configure beets`: http://beets.readthedocs.org/en/latest/guides/main.html
+.. _`play plugin`: http://beets.readthedocs.org/en/latest/plugins/play.html
+.. _`query syntax`: http://beets.readthedocs.org/en/latest/reference/query.html
+.. _`enable the play plugin`: http://beets.readthedocs.org/en/latest/plugins/index.html#using-plugins
+__ grooved_
+
+Dependencies
+------------
+
+* `libmpv`
+
+Building
+--------
+
+grooved is distributed as source code. Build with:
+
+.. code-block:: bash
+
+   $ make
+
+Copyright
+---------
+
+Copyright (C) 2014 Alessandro Ghedini <alessandro@ghedini.me>
+
+See COPYING_ for the license.
+
+.. _grooved: http://ghedo.github.io/grooved/grooved.html
+.. _groovectl: http://ghedo.github.io/grooved/groovectl.html
+.. _COPYING: https://github.com/ghedo/grooved/tree/master/COPYING
