@@ -4,4 +4,4 @@
  * Copyright (c) 2014, Alessandro Ghedini
  * All rights reserved.
  *
- * Redistribution
+ * Redistribution and use in source and binary forms, 
