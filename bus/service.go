@@ -5,4 +5,4 @@
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
- * modification, a
+ * modification, are permitted provided that the followin
