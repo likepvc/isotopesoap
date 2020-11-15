@@ -28,4 +28,8 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package bu
+package bus
+
+import "fmt"
+
+import "github.com/godbus/dbu
