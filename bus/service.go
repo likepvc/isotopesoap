@@ -32,4 +32,5 @@ package bus
 
 import "fmt"
 
-import "github.com/godbus/dbu
+import "github.com/godbus/dbus"
+import "github.com/godbus/dbus/introsp
