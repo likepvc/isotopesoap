@@ -34,4 +34,6 @@ import "fmt"
 
 import "github.com/godbus/dbus"
 import "github.com/godbus/dbus/introspect"
-import "github.com/godbus/dbus/p
+import "github.com/godbus/dbus/prop"
+
+import "github.com/ghedo/grooved/
