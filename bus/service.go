@@ -33,4 +33,5 @@ package bus
 import "fmt"
 
 import "github.com/godbus/dbus"
-import "github.com/godbus/dbus/introsp
+import "github.com/godbus/dbus/introspect"
+import "github.com/godbus/dbus/p
