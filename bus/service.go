@@ -39,3 +39,5 @@ import "github.com/godbus/dbus/prop"
 import "github.com/ghedo/grooved/player"
 
 const bus_introspection = `
+<?xml version="1.0" encoding="UTF-8"?>
+<no
