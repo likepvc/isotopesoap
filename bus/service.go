@@ -36,4 +36,6 @@ import "github.com/godbus/dbus"
 import "github.com/godbus/dbus/introspect"
 import "github.com/godbus/dbus/prop"
 
-import "github.com/ghedo/grooved/
+import "github.com/ghedo/grooved/player"
+
+const bus_introspection = `
