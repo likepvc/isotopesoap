@@ -41,4 +41,5 @@ import "github.com/ghedo/grooved/player"
 const bus_introspection = `
 <?xml version="1.0" encoding="UTF-8"?>
 <node>
-  <interface name="io.github.ghedo.gro
+  <interface name="io.github.ghedo.grooved.Player">
+    <property name
