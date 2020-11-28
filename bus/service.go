@@ -42,4 +42,5 @@ const bus_introspection = `
 <?xml version="1.0" encoding="UTF-8"?>
 <node>
   <interface name="io.github.ghedo.grooved.Player">
-    <property name
+    <property name="PlaybackStatus" type="s" access="read">
+    </pr
