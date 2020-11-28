@@ -45,4 +45,5 @@ const bus_introspection = `
     <property name="PlaybackStatus" type="s" access="read">
     </property>
 
-    <property name="LoopStatus" 
+    <property name="LoopStatus" type="s" access="readwrite">
+   
