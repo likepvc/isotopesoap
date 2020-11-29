@@ -48,4 +48,4 @@ const bus_introspection = `
     <property name="LoopStatus" type="s" access="readwrite">
     </property>
 
-    <property name="Trac
+    <property name="TrackMetadata" type="a{ss}" access="read">
