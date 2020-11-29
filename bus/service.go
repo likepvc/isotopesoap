@@ -49,3 +49,6 @@ const bus_introspection = `
     </property>
 
     <property name="TrackMetadata" type="a{ss}" access="read">
+    </property>
+
+    <property 
