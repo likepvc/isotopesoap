@@ -59,4 +59,5 @@ const bus_introspection = `
 
     <method name="TrackPosition">
       <arg direction="out" name="position" type="d"/>
-      <arg directi
+      <arg direction="out" name="percent" type="d"/>
+    <
