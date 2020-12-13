@@ -58,4 +58,5 @@ const bus_introspection = `
     </property>
 
     <method name="TrackPosition">
-      <arg direction="out" name="
+      <arg direction="out" name="position" type="d"/>
+      <arg directi
