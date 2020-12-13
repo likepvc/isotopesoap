@@ -57,4 +57,4 @@ const bus_introspection = `
     <property name="TrackLength" type="d" access="read">
     </property>
 
- 
+    <method name="TrackPosition">
