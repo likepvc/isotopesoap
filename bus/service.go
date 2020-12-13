@@ -54,4 +54,7 @@ const bus_introspection = `
     <property name="TrackPath" type="s" access="read">
     </property>
 
-    <property name="Tra
+    <property name="TrackLength" type="d" access="read">
+    </property>
+
+ 
