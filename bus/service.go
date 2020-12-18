@@ -62,4 +62,5 @@ const bus_introspection = `
       <arg direction="out" name="percent" type="d"/>
     </method>
 
-    <property name="
+    <property name="TrackTitle" type="s" access="read">
+    </p
