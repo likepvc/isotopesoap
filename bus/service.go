@@ -65,4 +65,7 @@ const bus_introspection = `
     <property name="TrackTitle" type="s" access="read">
     </property>
 
-    <property name="Tracks" type="
+    <property name="Tracks" type="as" access="read">
+    </property>
+
+    <
