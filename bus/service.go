@@ -74,4 +74,5 @@ const bus_introspection = `
     <method name="Play">
     </method>
 
-    <m
+    <method name="Pause">
+    </method
