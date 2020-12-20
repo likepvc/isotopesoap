@@ -71,4 +71,7 @@ const bus_introspection = `
     <property name="Volume" type="d" access="readwrite">
     </property>
 
-    <method
+    <method name="Play">
+    </method>
+
+    <m
