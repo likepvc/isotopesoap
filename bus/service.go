@@ -68,4 +68,7 @@ const bus_introspection = `
     <property name="Tracks" type="as" access="read">
     </property>
 
-    <property name="Volume" type="d" acces
+    <property name="Volume" type="d" access="readwrite">
+    </property>
+
+    <method
