@@ -75,4 +75,9 @@ const bus_introspection = `
     </method>
 
     <method name="Pause">
-    </method
+    </method>
+
+    <method name="Toggle">
+    </method>
+
+    <
