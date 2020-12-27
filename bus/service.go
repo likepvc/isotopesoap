@@ -86,4 +86,7 @@ const bus_introspection = `
     <method name="Prev">
     </method>
 
-    <
+    <method name="Stop">
+    </method>
+
+   
