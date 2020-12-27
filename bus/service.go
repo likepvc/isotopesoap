@@ -89,4 +89,5 @@ const bus_introspection = `
     <method name="Stop">
     </method>
 
-   
+    <method name="Seek">
+      <arg
