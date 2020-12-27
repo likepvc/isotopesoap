@@ -80,4 +80,7 @@ const bus_introspection = `
     <method name="Toggle">
     </method>
 
-    <
+    <method name="Next">
+    </method>
+
+   
