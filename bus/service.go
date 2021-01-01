@@ -90,4 +90,7 @@ const bus_introspection = `
     </method>
 
     <method name="Seek">
-      <arg direction="in" name="seconds" type
+      <arg direction="in" name="seconds" type="x"/>
+    </method>
+
+    <method name
