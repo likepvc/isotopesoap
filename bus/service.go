@@ -94,4 +94,5 @@ const bus_introspection = `
     </method>
 
     <method name="AddTrack">
-      <arg direction="in" n
+      <arg direction="in" name="path" type="s"/>
+    </metho
