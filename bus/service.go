@@ -93,4 +93,5 @@ const bus_introspection = `
       <arg direction="in" name="seconds" type="x"/>
     </method>
 
-    <method name
+    <method name="AddTrack">
+      <arg direction="in" n
