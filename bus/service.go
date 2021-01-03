@@ -98,3 +98,4 @@ const bus_introspection = `
     </method>
 
     <method name="AddList">
+      <arg direction="in" name="path" ty
