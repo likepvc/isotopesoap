@@ -101,4 +101,5 @@ const bus_introspection = `
       <arg direction="in" name="path" type="s"/>
     </method>
 
-    <method name="GotoTrac
+    <method name="GotoTrack">
+      <arg direction="in" name="in
