@@ -105,4 +105,5 @@ const bus_introspection = `
       <arg direction="in" name="index" type="t"/>
     </method>
 
-    <method name="Remo
+    <method name="RemoveTrack">
+      <arg direction="in" name=
