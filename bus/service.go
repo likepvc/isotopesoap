@@ -111,4 +111,6 @@ const bus_introspection = `
 
     <method name="Quit">
     </method>
-  </
+  </interface>
+
+  <interface name="org.freedes
