@@ -109,4 +109,6 @@ const bus_introspection = `
       <arg direction="in" name="index" type="x"/>
     </method>
 
-    <m
+    <method name="Quit">
+    </method>
+  </
