@@ -116,4 +116,7 @@ const bus_introspection = `
   <interface name="org.freedesktop.DBus.Introspectable">
     <method name="Introspect">
       <arg name="out" direction="out" type="s"/>
-    
+    </method>
+  </interface>
+
+  <interface n
