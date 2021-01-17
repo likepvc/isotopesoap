@@ -119,4 +119,5 @@ const bus_introspection = `
     </method>
   </interface>
 
-  <interface n
+  <interface name="org.freedesktop.DBus.Properties">
+    
