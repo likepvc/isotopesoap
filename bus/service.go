@@ -121,4 +121,4 @@ const bus_introspection = `
 
   <interface name="org.freedesktop.DBus.Properties">
     <method name="Get">
-      <arg n
+      <arg name="interface" direction="in" ty
