@@ -123,4 +123,6 @@ const bus_introspection = `
     <method name="Get">
       <arg name="interface" direction="in" type="s"/>
       <arg name="property" direction="in" type="s"/>
-      <arg name="val
+      <arg name="value" direction="out" type="v"/>
+    </method>
+   
