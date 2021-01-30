@@ -126,4 +126,5 @@ const bus_introspection = `
       <arg name="value" direction="out" type="v"/>
     </method>
     <method name="GetAll">
-      <arg name="interf
+      <arg name="interface" direction="in" type="s"/>
+      <
