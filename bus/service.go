@@ -127,4 +127,5 @@ const bus_introspection = `
     </method>
     <method name="GetAll">
       <arg name="interface" direction="in" type="s"/>
-      <arg name="props" direction=
+      <arg name="props" direction="out" type="a{sv}"/>
+    </method>
