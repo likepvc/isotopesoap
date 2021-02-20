@@ -129,3 +129,5 @@ const bus_introspection = `
       <arg name="interface" direction="in" type="s"/>
       <arg name="props" direction="out" type="a{sv}"/>
     </method>
+    <method name="Set">
+      <arg name="interface"
