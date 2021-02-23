@@ -134,4 +134,5 @@ const bus_introspection = `
       <arg name="property" direction="in" type="s"/>
       <arg name="value" direction="in" type="v"/>
     </method>
-    <signal n
+    <signal name="PropertiesChanged">
+      <arg name="int
