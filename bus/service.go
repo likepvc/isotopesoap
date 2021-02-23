@@ -132,4 +132,6 @@ const bus_introspection = `
     <method name="Set">
       <arg name="interface" direction="in" type="s"/>
       <arg name="property" direction="in" type="s"/>
-      <arg name="value" direction="in" type=
+      <arg name="value" direction="in" type="v"/>
+    </method>
+    <signal n
