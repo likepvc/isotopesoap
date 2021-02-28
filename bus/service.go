@@ -136,4 +136,5 @@ const bus_introspection = `
     </method>
     <signal name="PropertiesChanged">
       <arg name="interface" type="s"/>
-      <arg name="changed_p
+      <arg name="changed_properties" type="a{sv}"/>
+      <arg name="invalid
