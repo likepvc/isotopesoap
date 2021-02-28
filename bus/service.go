@@ -139,4 +139,7 @@ const bus_introspection = `
       <arg name="changed_properties" type="a{sv}"/>
       <arg name="invalidates_properties" type="as"/>
     </signal>
- 
+  </interface>
+</node>`
+
+const bus_name = "i
