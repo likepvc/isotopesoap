@@ -142,4 +142,5 @@ const bus_introspection = `
   </interface>
 </node>`
 
-const bus_name = "i
+const bus_name = "io.github.ghedo.grooved"
+const bus_p
