@@ -143,4 +143,5 @@ const bus_introspection = `
 </node>`
 
 const bus_name = "io.github.ghedo.grooved"
-const bus_p
+const bus_path = "/io/github/ghedo/grooved"
+const bus_interf
