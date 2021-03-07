@@ -147,4 +147,7 @@ const bus_path = "/io/github/ghedo/grooved"
 const bus_interface_player = "io.github.ghedo.grooved.Player"
 const bus_interface_introspect = "org.freedesktop.DBus.Introspectable"
 
-var bus
+var bus *Bus
+
+type Bus struct {
+    player *player.Pl
