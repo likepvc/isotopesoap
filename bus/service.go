@@ -150,4 +150,8 @@ const bus_interface_introspect = "org.freedesktop.DBus.Introspectable"
 var bus *Bus
 
 type Bus struct {
-    player *player.Pl
+    player *player.Player
+    props  *prop.Properties
+}
+
+func (b *Bus)
