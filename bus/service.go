@@ -154,4 +154,4 @@ type Bus struct {
     props  *prop.Properties
 }
 
-func (b *Bus)
+func (b *Bus) TrackPosition() (float64, float64, *db
