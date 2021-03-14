@@ -155,4 +155,5 @@ type Bus struct {
 }
 
 func (b *Bus) TrackPosition() (float64, float64, *dbus.Error) {
-    time, err := b.
+    time, err := b.player.GetTrackPosition(false)
+    if err != ni
