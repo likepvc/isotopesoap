@@ -154,4 +154,5 @@ type Bus struct {
     props  *prop.Properties
 }
 
-func (b *Bus) TrackPosition() (float64, float64, *db
+func (b *Bus) TrackPosition() (float64, float64, *dbus.Error) {
+    time, err := b.
