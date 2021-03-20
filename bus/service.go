@@ -161,4 +161,6 @@ func (b *Bus) TrackPosition() (float64, float64, *dbus.Error) {
                                    []interface{}{err.Error()})
     }
 
-    percent, err := b.player.GetTra
+    percent, err := b.player.GetTrackPosition(true)
+    if err != nil {
+        re
