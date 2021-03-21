@@ -163,4 +163,4 @@ func (b *Bus) TrackPosition() (float64, float64, *dbus.Error) {
 
     percent, err := b.player.GetTrackPosition(true)
     if err != nil {
-        re
+        return 0, 0, dbus.NewError("io.github.ghedo.gro
