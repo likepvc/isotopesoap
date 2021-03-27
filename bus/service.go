@@ -170,4 +170,5 @@ func (b *Bus) TrackPosition() (float64, float64, *dbus.Error) {
     return time, percent, nil
 }
 
-func (b *Bu
+func (b *Bus) Play() *dbus.Error {
+    err := b.player.P
