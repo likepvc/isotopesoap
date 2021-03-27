@@ -167,4 +167,7 @@ func (b *Bus) TrackPosition() (float64, float64, *dbus.Error) {
                                    []interface{}{err.Error()})
     }
 
-    return t
+    return time, percent, nil
+}
+
+func (b *Bu
