@@ -171,4 +171,6 @@ func (b *Bus) TrackPosition() (float64, float64, *dbus.Error) {
 }
 
 func (b *Bus) Play() *dbus.Error {
-    err := b.player.P
+    err := b.player.Play()
+    if err != nil {
+       
