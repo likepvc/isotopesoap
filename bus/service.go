@@ -173,4 +173,5 @@ func (b *Bus) TrackPosition() (float64, float64, *dbus.Error) {
 func (b *Bus) Play() *dbus.Error {
     err := b.player.Play()
     if err != nil {
-        return dbus.NewError("io.github.ghedo.gr
+        return dbus.NewError("io.github.ghedo.grooved.Error",
+                      
