@@ -176,3 +176,8 @@ func (b *Bus) Play() *dbus.Error {
         return dbus.NewError("io.github.ghedo.grooved.Error",
                              []interface{}{err.Error()})
     }
+
+    return nil
+}
+
+func (b *Bus) Pause() *dbus.Er
