@@ -181,4 +181,6 @@ func (b *Bus) Play() *dbus.Error {
 }
 
 func (b *Bus) Pause() *dbus.Error {
-    err := b.player.Pause(
+    err := b.player.Pause()
+    if err != nil {
+        return dbus.NewError
