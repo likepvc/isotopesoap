@@ -183,4 +183,5 @@ func (b *Bus) Play() *dbus.Error {
 func (b *Bus) Pause() *dbus.Error {
     err := b.player.Pause()
     if err != nil {
-        return dbus.NewError
+        return dbus.NewError("io.github.ghedo.grooved.Error",
+              
