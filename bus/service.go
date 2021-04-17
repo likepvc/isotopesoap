@@ -184,4 +184,4 @@ func (b *Bus) Pause() *dbus.Error {
     err := b.player.Pause()
     if err != nil {
         return dbus.NewError("io.github.ghedo.grooved.Error",
-              
+                             []interface{}{err.Er
