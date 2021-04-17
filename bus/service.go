@@ -191,4 +191,6 @@ func (b *Bus) Pause() *dbus.Error {
 }
 
 func (b *Bus) Toggle() *dbus.Error {
-    err := b.player.T
+    err := b.player.Toggle()
+    if err != nil {
+      
