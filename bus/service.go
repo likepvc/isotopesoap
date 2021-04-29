@@ -197,4 +197,7 @@ func (b *Bus) Toggle() *dbus.Error {
                              []interface{}{err.Error()})
     }
 
-   
+    return nil
+}
+
+func (b *Bus) Next() *dbus.Error {
