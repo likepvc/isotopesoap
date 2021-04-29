@@ -194,4 +194,7 @@ func (b *Bus) Toggle() *dbus.Error {
     err := b.player.Toggle()
     if err != nil {
         return dbus.NewError("io.github.ghedo.grooved.Error",
-                       
+                             []interface{}{err.Error()})
+    }
+
+   
