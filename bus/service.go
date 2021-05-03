@@ -204,4 +204,4 @@ func (b *Bus) Next() *dbus.Error {
     err := b.player.Next()
     if err != nil {
         return dbus.NewError("io.github.ghedo.grooved.Error",
-        
+                             []interface{}{e
