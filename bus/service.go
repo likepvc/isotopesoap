@@ -202,4 +202,5 @@ func (b *Bus) Toggle() *dbus.Error {
 
 func (b *Bus) Next() *dbus.Error {
     err := b.player.Next()
-    if err !=
+    if err != nil {
+        return dbus.NewError("io.git
