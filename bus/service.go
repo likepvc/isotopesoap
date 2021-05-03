@@ -210,4 +210,5 @@ func (b *Bus) Next() *dbus.Error {
     return nil
 }
 
-func 
+func (b *Bus) Prev() *dbus.Error {
+    err := b.pl
