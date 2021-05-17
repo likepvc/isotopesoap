@@ -211,4 +211,5 @@ func (b *Bus) Next() *dbus.Error {
 }
 
 func (b *Bus) Prev() *dbus.Error {
-    err := b.pl
+    err := b.player.Prev()
+    if err != nil 
