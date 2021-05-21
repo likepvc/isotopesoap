@@ -220,4 +220,4 @@ func (b *Bus) Prev() *dbus.Error {
     return nil
 }
 
-fun
+func (b *Bus) Stop() *dbus
