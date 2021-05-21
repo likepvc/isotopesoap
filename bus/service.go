@@ -213,4 +213,5 @@ func (b *Bus) Next() *dbus.Error {
 func (b *Bus) Prev() *dbus.Error {
     err := b.player.Prev()
     if err != nil {
-        return dbus.NewError("io.github.ghedo.groov
+        return dbus.NewError("io.github.ghedo.grooved.Error",
+                             []
