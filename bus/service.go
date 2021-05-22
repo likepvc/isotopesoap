@@ -220,4 +220,6 @@ func (b *Bus) Prev() *dbus.Error {
     return nil
 }
 
-func (b *Bus) Stop() *dbus
+func (b *Bus) Stop() *dbus.Error {
+    err := b.player.Stop()
+    i
