@@ -222,4 +222,5 @@ func (b *Bus) Prev() *dbus.Error {
 
 func (b *Bus) Stop() *dbus.Error {
     err := b.player.Stop()
-    i
+    if err != nil {
+        return dbus.NewError("i
