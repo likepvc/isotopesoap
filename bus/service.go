@@ -230,4 +230,4 @@ func (b *Bus) Stop() *dbus.Error {
     return nil
 }
 
-func (b 
+func (b *Bus) Seek(seconds int64) *dbus.Error
