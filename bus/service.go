@@ -230,4 +230,5 @@ func (b *Bus) Stop() *dbus.Error {
     return nil
 }
 
-func (b *Bus) Seek(seconds int64) *dbus.Error
+func (b *Bus) Seek(seconds int64) *dbus.Error {
+    err := b.player.Seek(secon
