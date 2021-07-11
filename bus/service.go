@@ -233,4 +233,5 @@ func (b *Bus) Stop() *dbus.Error {
 func (b *Bus) Seek(seconds int64) *dbus.Error {
     err := b.player.Seek(seconds)
     if err != nil {
-        return dbus.NewError("io.github.ghedo.grooved.Erro
+        return dbus.NewError("io.github.ghedo.grooved.Error",
+                             []interfa
