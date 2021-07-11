@@ -237,4 +237,7 @@ func (b *Bus) Seek(seconds int64) *dbus.Error {
                              []interface{}{err.Error()})
     }
 
-    retur
+    return nil
+}
+
+func (b *Bus) AddTrack(path string) *dbu
