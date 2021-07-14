@@ -241,4 +241,6 @@ func (b *Bus) Seek(seconds int64) *dbus.Error {
 }
 
 func (b *Bus) AddTrack(path string) *dbus.Error {
-    err := b.player.AddTrack(path, 
+    err := b.player.AddTrack(path, false)
+    if err != nil {
+        return dbus.N
