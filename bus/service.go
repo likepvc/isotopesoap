@@ -243,4 +243,5 @@ func (b *Bus) Seek(seconds int64) *dbus.Error {
 func (b *Bus) AddTrack(path string) *dbus.Error {
     err := b.player.AddTrack(path, false)
     if err != nil {
-        return dbus.NewError("io.github.ghedo.grooved.Error
+        return dbus.NewError("io.github.ghedo.grooved.Error",
+                             []interf
