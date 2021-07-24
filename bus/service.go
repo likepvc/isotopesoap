@@ -251,4 +251,6 @@ func (b *Bus) AddTrack(path string) *dbus.Error {
 }
 
 func (b *Bus) AddList(path string) *dbus.Error {
-    err := b.player.AddList(path
+    err := b.player.AddList(path)
+    if err != nil {
+        
