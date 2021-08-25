@@ -254,4 +254,5 @@ func (b *Bus) AddList(path string) *dbus.Error {
     err := b.player.AddList(path)
     if err != nil {
         return dbus.NewError("io.github.ghedo.grooved.Error",
-                             []
+                             []interface{}{err.Error()})
+  
