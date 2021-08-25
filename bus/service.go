@@ -261,4 +261,4 @@ func (b *Bus) AddList(path string) *dbus.Error {
 }
 
 func (b *Bus) GotoTrack(index uint64) *dbus.Error {
-    er
+    err := b.player.GotoTrack(int64(index))
