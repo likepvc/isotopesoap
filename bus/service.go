@@ -255,4 +255,9 @@ func (b *Bus) AddList(path string) *dbus.Error {
     if err != nil {
         return dbus.NewError("io.github.ghedo.grooved.Error",
                              []interface{}{err.Error()})
-  
+    }
+
+    return nil
+}
+
+func (b *Bus) GotoTrack(ind
