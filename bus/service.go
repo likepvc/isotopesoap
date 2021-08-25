@@ -260,4 +260,5 @@ func (b *Bus) AddList(path string) *dbus.Error {
     return nil
 }
 
-func (b *Bus) GotoTrack(ind
+func (b *Bus) GotoTrack(index uint64) *dbus.Error {
+    er
