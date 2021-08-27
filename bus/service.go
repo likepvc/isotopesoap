@@ -263,4 +263,5 @@ func (b *Bus) AddList(path string) *dbus.Error {
 func (b *Bus) GotoTrack(index uint64) *dbus.Error {
     err := b.player.GotoTrack(int64(index))
     if err != nil {
-        return dbus.NewE
+        return dbus.NewError("io.github.ghedo.grooved.Error",
+ 
