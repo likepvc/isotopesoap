@@ -270,4 +270,5 @@ func (b *Bus) GotoTrack(index uint64) *dbus.Error {
     return nil
 }
 
-func (b
+func (b *Bus) RemoveTrack(index int64) *dbus.Error {
+ 
