@@ -271,4 +271,4 @@ func (b *Bus) GotoTrack(index uint64) *dbus.Error {
 }
 
 func (b *Bus) RemoveTrack(index int64) *dbus.Error {
- 
+    err := b.player.RemoveTrack(int
