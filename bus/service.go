@@ -273,4 +273,4 @@ func (b *Bus) GotoTrack(index uint64) *dbus.Error {
 func (b *Bus) RemoveTrack(index int64) *dbus.Error {
     err := b.player.RemoveTrack(int64(index))
     if err != nil {
-        ret
+        return dbus.NewError("io.github.gh
