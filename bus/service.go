@@ -280,4 +280,5 @@ func (b *Bus) RemoveTrack(index int64) *dbus.Error {
     return nil
 }
 
-func (b
+func (b *Bus) Quit() *dbus.Error {
+    err
