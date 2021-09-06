@@ -276,3 +276,8 @@ func (b *Bus) RemoveTrack(index int64) *dbus.Error {
         return dbus.NewError("io.github.ghedo.grooved.Error",
                              []interface{}{err.Error()})
     }
+
+    return nil
+}
+
+func (b
