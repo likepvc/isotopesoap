@@ -274,4 +274,5 @@ func (b *Bus) RemoveTrack(index int64) *dbus.Error {
     err := b.player.RemoveTrack(int64(index))
     if err != nil {
         return dbus.NewError("io.github.ghedo.grooved.Error",
-             
+                             []interface{}{err.Error()})
+    }
