@@ -281,4 +281,5 @@ func (b *Bus) RemoveTrack(index int64) *dbus.Error {
 }
 
 func (b *Bus) Quit() *dbus.Error {
-    err
+    err := b.player.Quit()
+    if err != n
