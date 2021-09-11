@@ -283,4 +283,5 @@ func (b *Bus) RemoveTrack(index int64) *dbus.Error {
 func (b *Bus) Quit() *dbus.Error {
     err := b.player.Quit()
     if err != nil {
-        return dbus.NewError("i
+        return dbus.NewError("io.github.ghedo.grooved.Error",
+     
