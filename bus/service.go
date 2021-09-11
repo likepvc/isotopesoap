@@ -284,4 +284,7 @@ func (b *Bus) Quit() *dbus.Error {
     err := b.player.Quit()
     if err != nil {
         return dbus.NewError("io.github.ghedo.grooved.Error",
-                             []in
+                             []interface{}{err.Error()})
+    }
+
+    ret
