@@ -287,4 +287,7 @@ func (b *Bus) Quit() *dbus.Error {
                              []interface{}{err.Error()})
     }
 
-    ret
+    return nil
+}
+
+func HandleStatusChange() {
