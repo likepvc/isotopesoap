@@ -291,3 +291,4 @@ func (b *Bus) Quit() *dbus.Error {
 }
 
 func HandleStatusChange() {
+    status := bus.player.Statu
