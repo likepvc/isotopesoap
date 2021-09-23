@@ -291,4 +291,5 @@ func (b *Bus) Quit() *dbus.Error {
 }
 
 func HandleStatusChange() {
-    status := bus.player.Statu
+    status := bus.player.Status.String()
+    bus.props.SetMust(bus_interface_p
