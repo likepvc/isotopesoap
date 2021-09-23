@@ -292,4 +292,7 @@ func (b *Bus) Quit() *dbus.Error {
 
 func HandleStatusChange() {
     status := bus.player.Status.String()
-    bus.props.SetMust(bus_interface_p
+    bus.props.SetMust(bus_interface_player, "PlaybackStatus", status)
+}
+
+fu
