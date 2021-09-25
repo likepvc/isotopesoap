@@ -295,4 +295,5 @@ func HandleStatusChange() {
     bus.props.SetMust(bus_interface_player, "PlaybackStatus", status)
 }
 
-fu
+func HandleTrackChange() {
+    metadata, _ := bus.
