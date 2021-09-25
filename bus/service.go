@@ -297,4 +297,4 @@ func HandleStatusChange() {
 
 func HandleTrackChange() {
     metadata, _ := bus.player.GetTrackMetadata()
-    bus.props.Se
+    bus.props.SetMust(bus_interface_player, "TrackMetadata", metada
