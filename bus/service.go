@@ -300,4 +300,4 @@ func HandleTrackChange() {
     bus.props.SetMust(bus_interface_player, "TrackMetadata", metadata)
 
     path, _ := bus.player.GetTrackPath()
-    bus.props.Se
+    bus.props.SetMust(bus_interface_player, "TrackPat
