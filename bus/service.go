@@ -305,4 +305,5 @@ func HandleTrackChange() {
     length, _ := bus.player.GetTrackLength()
     bus.props.SetMust(bus_interface_player, "TrackLength", length)
 
-    title, _ := bus.player.
+    title, _ := bus.player.GetTrackTitle()
+    bus.props.SetMust(bus_inter
