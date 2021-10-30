@@ -309,4 +309,5 @@ func HandleTrackChange() {
     bus.props.SetMust(bus_interface_player, "TrackTitle", title)
 }
 
-fu
+func HandleTracksChange() {
+    fi
