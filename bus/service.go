@@ -310,4 +310,5 @@ func HandleTrackChange() {
 }
 
 func HandleTracksChange() {
-    fi
+    files, _ := bus.player.List()
+    b
