@@ -311,4 +311,7 @@ func HandleTrackChange() {
 
 func HandleTracksChange() {
     files, _ := bus.player.List()
-    bus.props.SetMust(bus_interface_player, "Tracks",
+    bus.props.SetMust(bus_interface_player, "Tracks", files)
+}
+
+func HandleVolumeChange()
