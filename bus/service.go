@@ -320,4 +320,4 @@ func HandleVolumeChange() {
 }
 
 func SetLoopStatus(c *prop.Change) *dbus.Error {
-    bus.player.Set
+    bus.player.SetLoopStatus(c.Value.(string))
