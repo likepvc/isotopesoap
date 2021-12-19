@@ -316,4 +316,7 @@ func HandleTracksChange() {
 
 func HandleVolumeChange() {
     vol, _ := bus.player.GetProperty("volume")
-    bus.props.SetMust(bus_interface_player, "Volume", vol.(float6
+    bus.props.SetMust(bus_interface_player, "Volume", vol.(float64))
+}
+
+func SetLoopStatus(c *prop.C
