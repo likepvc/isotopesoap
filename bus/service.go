@@ -319,4 +319,5 @@ func HandleVolumeChange() {
     bus.props.SetMust(bus_interface_player, "Volume", vol.(float64))
 }
 
-func SetLoopStatus(c *prop.C
+func SetLoopStatus(c *prop.Change) *dbus.Error {
+    bus.player.Set
