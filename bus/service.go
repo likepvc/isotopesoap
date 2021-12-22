@@ -324,4 +324,5 @@ func SetLoopStatus(c *prop.Change) *dbus.Error {
     return nil
 }
 
-func SetVolume(c *prop.Change) *dbu
+func SetVolume(c *prop.Change) *dbus.Error {
+    err := bus.player.SetPro
