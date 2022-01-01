@@ -328,4 +328,7 @@ func SetVolume(c *prop.Change) *dbus.Error {
     err := bus.player.SetProperty("volume", c.Value)
     if err != nil {
         return dbus.NewError("io.github.ghedo.grooved.Error",
-                             []
+                             []interface{}{err.Error()})
+    }
+
+    re
