@@ -336,3 +336,5 @@ func SetVolume(c *prop.Change) *dbus.Error {
 
 func Run(p *player.Player) error {
     conn, err := dbus.SessionBus()
+    if err != nil {
+        ret
