@@ -342,4 +342,4 @@ func Run(p *player.Player) error {
 
     reply, err := conn.RequestName(bus_name, dbus.NameFlagDoNotQueue)
     if err != nil {
-        return fm
+        return fmt.Errorf("Could not request name: %s"
