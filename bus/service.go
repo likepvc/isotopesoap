@@ -345,4 +345,5 @@ func Run(p *player.Player) error {
         return fmt.Errorf("Could not request name: %s", err)
     }
 
-    if reply != dbus.Reque
+    if reply != dbus.RequestNameReplyPrimaryOwner {
+        return 
