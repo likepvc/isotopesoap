@@ -340,4 +340,4 @@ func Run(p *player.Player) error {
         return fmt.Errorf("Could not get session bus: %s", err)
     }
 
-    reply, err := 
+    reply, err := conn.RequestName(bus_name, dbus.NameFlagDoNot
