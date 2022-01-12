@@ -346,4 +346,4 @@ func Run(p *player.Player) error {
     }
 
     if reply != dbus.RequestNameReplyPrimaryOwner {
-        return 
+        return fmt.Errorf("Name already take
