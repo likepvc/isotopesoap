@@ -346,4 +346,7 @@ func Run(p *player.Player) error {
     }
 
     if reply != dbus.RequestNameReplyPrimaryOwner {
-        return fmt.Errorf("Name already take
+        return fmt.Errorf("Name already take")
+    }
+
+    bus_props_spec := map[st
