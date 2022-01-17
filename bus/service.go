@@ -349,4 +349,5 @@ func Run(p *player.Player) error {
         return fmt.Errorf("Name already take")
     }
 
-    bus_props_spec := map[st
+    bus_props_spec := map[string]map[string]*prop.Prop{
+        
