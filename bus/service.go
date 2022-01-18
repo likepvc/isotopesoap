@@ -351,4 +351,5 @@ func Run(p *player.Player) error {
 
     bus_props_spec := map[string]map[string]*prop.Prop{
         bus_interface_player: {
-            "Play
+            "PlaybackStatus": {
+                p.Status.Str
