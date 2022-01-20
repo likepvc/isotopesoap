@@ -353,4 +353,7 @@ func Run(p *player.Player) error {
         bus_interface_player: {
             "PlaybackStatus": {
                 p.Status.String(), false,
-                prop
+                prop.EmitTrue, nil,
+            },
+
+            "
