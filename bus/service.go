@@ -356,4 +356,5 @@ func Run(p *player.Player) error {
                 prop.EmitTrue, nil,
             },
 
-            "
+            "LoopStatus": {
+                "none", true, 
