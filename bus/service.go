@@ -360,4 +360,5 @@ func Run(p *player.Player) error {
                 "none", true, prop.EmitTrue, SetLoopStatus,
             },
 
-        
+            "TrackMetadata": {
+                map[string]stri
