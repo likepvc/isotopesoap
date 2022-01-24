@@ -362,4 +362,6 @@ func Run(p *player.Player) error {
 
             "TrackMetadata": {
                 map[string]string{}, false, prop.EmitTrue, nil,
-  
+            },
+
+            "TrackPath": {
