@@ -368,4 +368,5 @@ func Run(p *player.Player) error {
                 "", false, prop.EmitTrue, nil,
             },
 
-            "Trac
+            "TrackLength": {
+                float64(0), f
