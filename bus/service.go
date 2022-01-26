@@ -365,4 +365,7 @@ func Run(p *player.Player) error {
             },
 
             "TrackPath": {
-                "", false, prop.E
+                "", false, prop.EmitTrue, nil,
+            },
+
+            "Trac
