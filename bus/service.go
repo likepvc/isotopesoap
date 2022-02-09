@@ -373,4 +373,5 @@ func Run(p *player.Player) error {
             },
 
             "TrackTitle": {
-           
+                "", false, prop.EmitTrue, nil,
+      
