@@ -370,4 +370,7 @@ func Run(p *player.Player) error {
 
             "TrackLength": {
                 float64(0), false, prop.EmitTrue, nil,
-            }
+            },
+
+            "TrackTitle": {
+           
