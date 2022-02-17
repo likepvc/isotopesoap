@@ -386,4 +386,6 @@ func Run(p *player.Player) error {
         },
     }
 
- 
+    bus = &Bus{
+        player: p,
+       
