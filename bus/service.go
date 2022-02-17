@@ -381,4 +381,9 @@ func Run(p *player.Player) error {
             },
 
             "Volume": {
-                0.0, true, prop.EmitTrue, SetVolu
+                0.0, true, prop.EmitTrue, SetVolume,
+            },
+        },
+    }
+
+ 
