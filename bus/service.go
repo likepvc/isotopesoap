@@ -388,4 +388,4 @@ func Run(p *player.Player) error {
 
     bus = &Bus{
         player: p,
-       
+        props:  prop.New(conn, bus_path, bus_pr
