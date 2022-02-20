@@ -391,4 +391,6 @@ func Run(p *player.Player) error {
         props:  prop.New(conn, bus_path, bus_props_spec),
     }
 
-    conn.Export(bus, bu
+    conn.Export(bus, bus_path, bus_interface_player)
+
+    p.HandleStat
