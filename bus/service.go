@@ -393,4 +393,5 @@ func Run(p *player.Player) error {
 
     conn.Export(bus, bus_path, bus_interface_player)
 
-    p.HandleStat
+    p.HandleStatusChange = HandleStatusChange
+    p.Ha
