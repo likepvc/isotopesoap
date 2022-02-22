@@ -395,4 +395,5 @@ func Run(p *player.Player) error {
 
     p.HandleStatusChange = HandleStatusChange
     p.HandleTrackChange  = HandleTrackChange
-    p
+    p.HandleTracksChange = HandleTracksChange
+    p.Ha
