@@ -396,4 +396,6 @@ func Run(p *player.Player) error {
     p.HandleStatusChange = HandleStatusChange
     p.HandleTrackChange  = HandleTrackChange
     p.HandleTracksChange = HandleTracksChange
-    p.Ha
+    p.HandleVolumeChange = HandleVolumeChange
+
+    i
