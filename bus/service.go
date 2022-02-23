@@ -398,4 +398,4 @@ func Run(p *player.Player) error {
     p.HandleTracksChange = HandleTracksChange
     p.HandleVolumeChange = HandleVolumeChange
 
-    i
+    introspect := introspect.Introspectable(bus_
