@@ -399,4 +399,4 @@ func Run(p *player.Player) error {
     p.HandleVolumeChange = HandleVolumeChange
 
     introspect := introspect.Introspectable(bus_introspection)
-    conn.Export(introspe
+    conn.Export(introspect, bus_path, bus_interface_introspect)
