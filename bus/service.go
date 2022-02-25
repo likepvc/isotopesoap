@@ -400,3 +400,6 @@ func Run(p *player.Player) error {
 
     introspect := introspect.Introspectable(bus_introspection)
     conn.Export(introspect, bus_path, bus_interface_introspect)
+
+    return nil
+}
