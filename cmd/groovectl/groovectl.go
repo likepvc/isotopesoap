@@ -61,3 +61,37 @@ Usage:
   groovectl save <file>
   groovectl goto <index>
   groovectl rm <index>
+  groovectl ls
+  groovectl status
+  groovectl seek <seconds>
+  groovectl loop (none|track|list|force)
+  groovectl quit
+
+Commands:
+  play                           Unpause the player.
+  pause                          Pause the player.
+  toggle                         Toggle the player's pause status.
+  next                           Skip to next track.
+  prev                           Skip to previous track.
+  stop                           Stop playback and clear tracklist.
+  add <track> ...                Append tracks to the player's tracklist.
+  [--append] load <file>         Load a playlist file.
+  save <file>                    Save the tracklist to a playlist file.
+  goto <index>                   Skip to a specific track in the tracklist.
+  rm <index>                     Remove a track from the tracklist.
+  ls                             Show the tracklist.
+  status                         Show the status of the player.
+  seek <seconds>                 Seek by a relative amount of seconds.
+  loop (none|track|list|force)   Set the player's loop mode.
+  quit                           Shutdown the player.
+
+Options:
+  -h, --help                         Show the program's help message and exit.`
+
+    args, err := docopt.Parse(usage, nil, true, "", true)
+    if err != nil {
+        log.Fatalf("Invalid arguments: %s", err)
+    }
+
+    conn, err := dbus.SessionBus()
+    if err != nil {
