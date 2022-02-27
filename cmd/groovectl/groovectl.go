@@ -95,3 +95,46 @@ Options:
 
     conn, err := dbus.SessionBus()
     if err != nil {
+        log.Fatalf("Could not get session bus: %s", err)
+    }
+
+    obj := conn.Object(bus_name, bus_path)
+
+    var call *dbus.Call
+
+    switch {
+    case args["play"].(bool) == true:
+        call = obj.Call(bus_interface + ".Play", 0)
+
+    case args["pause"].(bool) == true:
+        call = obj.Call(bus_interface + ".Pause", 0)
+
+    case args["toggle"].(bool) == true:
+        call = obj.Call(bus_interface + ".Toggle", 0)
+
+    case args["next"].(bool) == true:
+        call = obj.Call(bus_interface + ".Next", 0)
+
+    case args["prev"].(bool) == true:
+        call = obj.Call(bus_interface + ".Prev", 0)
+
+    case args["stop"].(bool) == true:
+        call = obj.Call(bus_interface + ".Stop", 0)
+
+    case args["add"].(bool) == true:
+        for _, track := range args["<track>"].([]string) {
+            if _, err := os.Stat(track); err == nil {
+                track, _ = filepath.Abs(track)
+            }
+
+            call = obj.Call(bus_interface + ".AddTrack", 0, track)
+        }
+
+    case args["load"].(bool) == true:
+        file := args["<file>"].(string)
+
+        if !args["--append"].(bool) {
+            call = obj.Call(bus_interface + ".Stop", 0)
+        }
+
+        call = obj.Call(bus_interface + ".AddList", 0, file)
