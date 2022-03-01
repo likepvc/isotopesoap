@@ -176,3 +176,38 @@ Options:
 
     case args["loop"].(bool) == true:
         var mode string
+
+        switch {
+        case args["none"].(bool):
+            mode = "none"
+
+        case args["track"].(bool):
+            mode = "track"
+
+        case args["list"].(bool):
+            mode = "list"
+
+        case args["force"].(bool):
+            mode = "force"
+        }
+
+        call = obj.Call("org.freedesktop.DBus.Properties.Set", 0,
+                                bus_interface, "LoopStatus",
+                                dbus.MakeVariant(mode))
+
+    case args["quit"].(bool) == true:
+        call = obj.Call(bus_interface + ".Quit", 0)
+    }
+
+    if call.Err != nil {
+        log.Fatalf("Error calling method: %s", call.Err)
+    }
+}
+
+func PrintList(obj dbus.BusObject) {
+    files, err := obj.GetProperty(bus_interface + ".Tracks")
+    if err != nil {
+        log.Fatalf("Could not retrieve property: %s", err)
+    }
+
+    current, _ := obj.GetProperty(bus_interface + ".TrackPath")
