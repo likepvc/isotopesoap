@@ -138,3 +138,41 @@ Options:
         }
 
         call = obj.Call(bus_interface + ".AddList", 0, file)
+
+    case args["save"].(bool) == true:
+        log.Fatalf("Not implemented")
+
+    case args["goto"].(bool) == true:
+        index, err := strconv.ParseUint(args["<index>"].(string), 10, 64)
+        if err != nil {
+            log.Fatalf("Could not parse arg: %s", err)
+        }
+
+        call = obj.Call(bus_interface + ".GotoTrack", 0, index)
+
+    case args["rm"].(bool) == true:
+        index, err := strconv.ParseInt(args["<index>"].(string), 10, 64)
+        if err != nil {
+            log.Fatalf("Could not parse arg: %s", err)
+        }
+
+        call = obj.Call(bus_interface + ".RemoveTrack", 0, index)
+
+    case args["ls"].(bool) == true:
+        PrintList(obj)
+        os.Exit(0)
+
+    case args["status"].(bool) == true:
+        PrintStatus(obj)
+        os.Exit(0)
+
+    case args["seek"].(bool) == true:
+        secs, err := strconv.ParseInt(args["<seconds>"].(string), 10, 64)
+        if err != nil {
+            log.Fatalf("Could not parse arg: %s", err)
+        }
+
+        call = obj.Call(bus_interface + ".Seek", 0, secs)
+
+    case args["loop"].(bool) == true:
+        var mode string
