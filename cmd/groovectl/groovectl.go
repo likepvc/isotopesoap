@@ -211,3 +211,45 @@ func PrintList(obj dbus.BusObject) {
     }
 
     current, _ := obj.GetProperty(bus_interface + ".TrackPath")
+
+    for i, file := range files.Value().([]string) {
+        var prefix string
+
+        if current.Value() != nil && file == current.Value().(string) {
+            prefix = "*"
+        } else {
+            prefix = " "
+        }
+
+        log.Printf("%s %3d:%s\n", prefix, i, file)
+    }
+}
+
+func PrintStatus(obj dbus.BusObject) {
+    title, err := obj.GetProperty(bus_interface + ".TrackTitle")
+    if err != nil {
+        log.Fatalf("Could not retrieve property: %s", err)
+    }
+
+    state, err := obj.GetProperty(bus_interface + ".PlaybackStatus")
+    if err != nil {
+        log.Fatalf("Could not retrieve property: %s", err)
+    }
+
+    metadata, err := obj.GetProperty(bus_interface + ".TrackMetadata")
+    if err != nil {
+        log.Fatalf("Could not retrieve property: %s", err)
+    }
+
+    length, err := obj.GetProperty(bus_interface + ".TrackLength")
+    if err != nil {
+        log.Fatalf("Could not retrieve property: %s", err)
+    }
+
+    var pos, percent float64
+    obj.Call(bus_interface + ".TrackPosition", 0).Store(&pos, &percent)
+
+    loop, err := obj.GetProperty(bus_interface + ".LoopStatus")
+    if err != nil {
+        log.Fatalf("Could not retrieve property: %s", err)
+    }
