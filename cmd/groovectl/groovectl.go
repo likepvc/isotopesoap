@@ -253,3 +253,23 @@ func PrintStatus(obj dbus.BusObject) {
     if err != nil {
         log.Fatalf("Could not retrieve property: %s", err)
     }
+
+    log.Printf("Title: %s\n", title.Value().(string))
+
+    log.Printf("Tags:\n")
+
+    for key, val := range metadata.Value().(map[string]string) {
+        log.Printf(" %s: %s\n", key, val)
+    }
+
+    pos_time := time.Duration(int64(pos)) * time.Second
+    len_time := time.Duration(int64(length.Value().(float64))) * time.Second
+
+    log.Printf(
+        "[%s]   %s/%s   (%.f%%)\n",
+        state.Value().(string), pos_time.String(), len_time.String(),
+        percent,
+    )
+
+    log.Printf("loop: %s\n", loop.Value().(string))
+}
