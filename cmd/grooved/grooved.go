@@ -60,3 +60,44 @@ Options:
 
     cfg_file, err := util.ExpandUser(args["--config"].(string))
     if err != nil {
+        log.Fatalf("Error expanding home directory: %s", err)
+    }
+
+    cfg, err := ini.LoadFile(cfg_file)
+    if err != nil {
+        log.Fatalf("Error loading config file: %s", err)
+    }
+
+    player, err := player.Init(cfg)
+    if err != nil {
+        log.Fatalf("Error creating player: %s", err)
+    }
+
+    if args["--list-outputs"].(bool) {
+        outputs, err := player.GetOutputList()
+        if err != nil {
+            log.Fatalf("Error retrieving property: %s", err)
+        }
+
+        sort.Strings(outputs)
+
+        for _, output := range outputs {
+            log.Println(output)
+        }
+
+        os.Exit(0);
+    }
+
+    if args["--verbose"].(bool) {
+        player.Verbose = true
+    }
+
+    err = bus.Run(player)
+    if err != nil {
+        log.Fatalf("Error creating dbus service: %s", err)
+    }
+
+    err = player.Run()
+    if err != nil {
+        log.Fatalf("Error running player: %s", err)
+    }
