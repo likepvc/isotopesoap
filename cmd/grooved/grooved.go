@@ -101,3 +101,6 @@ Options:
     if err != nil {
         log.Fatalf("Error running player: %s", err)
     }
+
+    player.Wait.Wait()
+}
