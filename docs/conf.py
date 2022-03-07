@@ -1,3 +1,4 @@
 # -*- coding: utf-8 -*-
 #
-# grooved document
+# grooved documentation build configuration file, created by
+# sph
