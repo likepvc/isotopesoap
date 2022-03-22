@@ -15,4 +15,4 @@
 import sys
 import os
 
-# If extensions (or modules to doc
+# If extensions (or modules to document with autodoc) are in ano
