@@ -22,4 +22,5 @@ import os
 
 # -- General configuration ------------------------------------------------
 
-# If your documentation needs a m
+# If your documentation needs a minimal Sphinx version, state it here.
+#n
