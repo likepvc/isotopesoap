@@ -23,4 +23,6 @@ import os
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-#n
+#needs_sphinx = '1.0'
+
+# Add any Sphinx extens
