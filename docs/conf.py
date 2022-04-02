@@ -25,4 +25,5 @@ import os
 # If your documentation needs a minimal Sphinx version, state it here.
 #needs_sphinx = '1.0'
 
-# Add any Sphinx extens
+# Add any Sphinx extension module names here, as strings. They can be
+# extens
