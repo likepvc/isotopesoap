@@ -26,4 +26,4 @@ import os
 #needs_sphinx = '1.0'
 
 # Add any Sphinx extension module names here, as strings. They can be
-# extens
+# extensions coming with Sphinx (named 'sphinx.ext
