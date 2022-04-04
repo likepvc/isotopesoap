@@ -30,4 +30,4 @@ import os
 # ones.
 extensions = []
 
-# Add
+# Add any paths that contain templates here, relati
