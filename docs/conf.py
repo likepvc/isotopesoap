@@ -36,4 +36,5 @@ templates_path = ['_templates']
 # The suffix of source filenames.
 source_suffix = '.rst'
 
-# The 
+# The encoding of source files.
+#source_enc
