@@ -42,4 +42,5 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'index'
 
-# Ge
+# General information about the project.
+projec
