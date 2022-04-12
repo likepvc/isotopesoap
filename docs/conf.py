@@ -43,4 +43,5 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-projec
+project = u'grooved'
+copyright = u'2014, Ale
