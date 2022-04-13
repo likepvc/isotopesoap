@@ -44,4 +44,6 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'grooved'
-copyright = u'2014, Ale
+copyright = u'2014, Alessandro Ghedini'
+
+# The version info for 
