@@ -46,4 +46,5 @@ master_doc = 'index'
 project = u'grooved'
 copyright = u'2014, Alessandro Ghedini'
 
-# The version info for the project you're documenting, acts as replacem
+# The version info for the project you're documenting, acts as replacement for
+# |version| and |release|, also 
