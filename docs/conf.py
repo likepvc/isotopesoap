@@ -47,4 +47,5 @@ project = u'grooved'
 copyright = u'2014, Alessandro Ghedini'
 
 # The version info for the project you're documenting, acts as replacement for
-# |version| and |release|, also 
+# |version| and |release|, also used in various other places throughout the
+# built docum
