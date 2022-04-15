@@ -48,4 +48,8 @@ copyright = u'2014, Alessandro Ghedini'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
-# built docum
+# built documents.
+#
+# The short X.Y version.
+version = '0.3'
+# 
