@@ -52,4 +52,5 @@ copyright = u'2014, Alessandro Ghedini'
 #
 # The short X.Y version.
 version = '0.3'
-# 
+# The full version, including alpha/beta/rc tags.
+release 
