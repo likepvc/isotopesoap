@@ -59,4 +59,5 @@ release = version
 # for a list of supported languages.
 #language = None
 
-# There are two options for replacing |today
+# There are two options for replacing |today|: either, you set today to some
+# 
