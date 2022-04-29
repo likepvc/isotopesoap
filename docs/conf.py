@@ -65,4 +65,4 @@ release = version
 # Else, today_fmt is used as the format for a strftime call.
 #today_fmt = '%B %d, %Y'
 
-# Li
+# List of patterns, relative to source directory,
