@@ -66,4 +66,5 @@ release = version
 #today_fmt = '%B %d, %Y'
 
 # List of patterns, relative to source directory, that match files and
-# directories to ign
+# directories to ignore when looking for source files.
+e
