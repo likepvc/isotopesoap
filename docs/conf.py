@@ -69,4 +69,4 @@ release = version
 # directories to ignore when looking for source files.
 exclude_patterns = ['_build']
 
-# T
+# The reST default role (used for this mark
