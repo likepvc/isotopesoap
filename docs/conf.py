@@ -67,4 +67,6 @@ release = version
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-e
+exclude_patterns = ['_build']
+
+# T
