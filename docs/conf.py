@@ -70,4 +70,7 @@ release = version
 exclude_patterns = ['_build']
 
 # The reST default role (used for this markup: `text`) to use for all
-# document
+# documents.
+#default_role = None
+
+# If true, '()' wi
