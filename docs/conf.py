@@ -73,4 +73,4 @@ exclude_patterns = ['_build']
 # documents.
 #default_role = None
 
-# If true, '()' wi
+# If true, '()' will be appended to :func: etc. cross-reference text.
