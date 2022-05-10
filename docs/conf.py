@@ -80,4 +80,4 @@ exclude_patterns = ['_build']
 # unit titles (such as .. function::).
 #add_module_names = True
 
-# If true, sectionauthor and moduleauthor
+# If true, sectionauthor and moduleauthor directives will be show
