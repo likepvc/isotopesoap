@@ -84,4 +84,5 @@ exclude_patterns = ['_build']
 # output. They are ignored by default.
 #show_authors = False
 
-# The name of the Pygments (syntax highli
+# The name of the Pygments (syntax highlighting) style to use.
+pygments_style = 'sphin
