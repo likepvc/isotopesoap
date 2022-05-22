@@ -90,4 +90,4 @@ pygments_style = 'sphinx'
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
-# If true, keep warnings as "system mes
+# If true, keep warnings as "system message" paragraphs in the built documents
