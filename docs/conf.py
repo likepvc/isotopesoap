@@ -94,4 +94,4 @@ pygments_style = 'sphinx'
 #keep_warnings = False
 
 
-# -- Options f
+# -- Options for HTML output -------------------
