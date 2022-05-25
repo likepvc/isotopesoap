@@ -96,4 +96,6 @@ pygments_style = 'sphinx'
 
 # -- Options for HTML output ----------------------------------------------
 
-# The theme to use for HTML and HTML Help pages.  See the docu
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+ht
