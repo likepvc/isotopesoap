@@ -98,4 +98,6 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-ht
+html_theme = 'nature'
+
+# Theme options are theme-
