@@ -100,4 +100,4 @@ pygments_style = 'sphinx'
 # a list of builtin themes.
 html_theme = 'nature'
 
-# Theme options are theme-
+# Theme options are theme-specific and customize the look and f
