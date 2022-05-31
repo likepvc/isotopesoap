@@ -105,4 +105,5 @@ html_theme = 'nature'
 # documentation.
 #html_theme_options = {}
 
-# Add any paths that contain custom themes h
+# Add any paths that contain custom themes here, relative to this directory.
+#
