@@ -112,4 +112,4 @@ html_theme = 'nature'
 # "<project> v<release> documentation".
 #html_title = None
 
-#
+# A shorter title for the nav
