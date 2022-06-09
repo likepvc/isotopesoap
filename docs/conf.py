@@ -112,4 +112,7 @@ html_theme = 'nature'
 # "<project> v<release> documentation".
 #html_title = None
 
-# A shorter title for the navigation bar.  Default is the same as
+# A shorter title for the navigation bar.  Default is the same as html_title.
+#html_short_title = None
+
+#
