@@ -119,4 +119,4 @@ html_theme = 'nature'
 # of the sidebar.
 #html_logo = None
 
-# The name of an i
+# The name of an image file (within the static path) to 
