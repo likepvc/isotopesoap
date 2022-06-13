@@ -119,4 +119,5 @@ html_theme = 'nature'
 # of the sidebar.
 #html_logo = None
 
-# The name of an image file (within the static path) to 
+# The name of an image file (within the static path) to use as favicon of the
+# docs.  This fi
