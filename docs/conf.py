@@ -120,4 +120,4 @@ html_theme = 'nature'
 #html_logo = None
 
 # The name of an image file (within the static path) to use as favicon of the
-# docs.  This fi
+# docs.  This file should be a Windows icon file 
