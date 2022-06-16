@@ -124,4 +124,4 @@ html_theme = 'nature'
 # pixels large.
 #html_favicon = None
 
-# Add a
+# Add any paths that contain custom static files (s
