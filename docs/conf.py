@@ -125,4 +125,4 @@ html_theme = 'nature'
 #html_favicon = None
 
 # Add any paths that contain custom static files (such as style sheets) here,
-# relative to t
+# relative to this directory. They are copied 
