@@ -129,4 +129,4 @@ html_theme = 'nature'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-# Add any extra paths th
+# Add any extra paths that contain custom files (such as rob
