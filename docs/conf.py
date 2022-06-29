@@ -134,4 +134,4 @@ html_static_path = ['_static']
 # directly to the root of the documentation.
 #html_extra_path = []
 
-# If not '', a
+# If not '', a 'Last updated on:' timestamp is ins
