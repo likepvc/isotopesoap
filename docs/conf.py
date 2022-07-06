@@ -142,4 +142,4 @@ html_static_path = ['_static']
 # typographically correct entities.
 #html_use_smartypants = True
 
-# Cu
+# Custom sidebar templates, maps 
