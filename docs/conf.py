@@ -145,4 +145,4 @@ html_static_path = ['_static']
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
 
-# Additional t
+# Additional templates that should be rendered to pages, maps
