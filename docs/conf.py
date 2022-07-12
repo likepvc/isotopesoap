@@ -153,3 +153,6 @@ html_static_path = ['_static']
 #html_domain_indices = True
 
 # If false, no index is generated.
+#html_use_index = True
+
+# If true, the ind
