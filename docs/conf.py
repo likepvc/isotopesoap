@@ -162,4 +162,6 @@ html_static_path = ['_static']
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_s
+#html_show_sphinx = True
+
+# If true, "(C) Copyrig
