@@ -168,4 +168,4 @@ html_static_path = ['_static']
 #html_show_copyright = True
 
 # If true, an OpenSearch description file will be output, and all pages will
-# contain a <link
+# contain a <link> tag referring to it.  The value of this opti
