@@ -170,4 +170,6 @@ html_static_path = ['_static']
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
 # base URL from which the finished HTML is served.
-#
+#html_use_opensearch = ''
+
+# This is 
