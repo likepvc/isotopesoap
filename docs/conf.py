@@ -172,4 +172,5 @@ html_static_path = ['_static']
 # base URL from which the finished HTML is served.
 #html_use_opensearch = ''
 
-# This is the file name suffix for HTML f
+# This is the file name suffix for HTML files (e.g. ".xhtml").
+#html_file_suffix = No
