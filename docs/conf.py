@@ -173,4 +173,6 @@ html_static_path = ['_static']
 #html_use_opensearch = ''
 
 # This is the file name suffix for HTML files (e.g. ".xhtml").
-#html_file_suffix = No
+#html_file_suffix = None
+
+# Output file base name for HTML 
