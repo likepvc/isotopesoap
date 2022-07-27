@@ -175,4 +175,8 @@ html_static_path = ['_static']
 # This is the file name suffix for HTML files (e.g. ".xhtml").
 #html_file_suffix = None
 
-# Output file base name for HTML 
+# Output file base name for HTML help builder.
+htmlhelp_basename = 'grooveddoc'
+
+
+# -- 
