@@ -179,4 +179,4 @@ html_static_path = ['_static']
 htmlhelp_basename = 'grooveddoc'
 
 
-# -- 
+# -- Options for manual page output ------------------
