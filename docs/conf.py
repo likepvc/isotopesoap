@@ -182,4 +182,4 @@ htmlhelp_basename = 'grooveddoc'
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
-# (source st
+# (source start file, name, description, autho
