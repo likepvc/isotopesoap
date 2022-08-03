@@ -185,4 +185,5 @@ htmlhelp_basename = 'grooveddoc'
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('grooved', 'grooved', u'groovy music player daemon',
-     [u
+     [u'Alessandro Ghedini'], 1),
+    ('gr
