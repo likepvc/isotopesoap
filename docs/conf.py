@@ -184,4 +184,5 @@ htmlhelp_basename = 'grooveddoc'
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('grooved', '
+    ('grooved', 'grooved', u'groovy music player daemon',
+     [u
