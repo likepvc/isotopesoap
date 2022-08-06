@@ -186,4 +186,8 @@ htmlhelp_basename = 'grooveddoc'
 man_pages = [
     ('grooved', 'grooved', u'groovy music player daemon',
      [u'Alessandro Ghedini'], 1),
-    ('groovectl', 'groovectl', u'groovy music player cl
+    ('groovectl', 'groovectl', u'groovy music player client',
+     [u'Alessandro Ghedini'], 1)
+]
+
+#
