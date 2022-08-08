@@ -190,4 +190,4 @@ man_pages = [
      [u'Alessandro Ghedini'], 1)
 ]
 
-#
+# If true, show URL addresses after
