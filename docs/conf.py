@@ -190,4 +190,5 @@ man_pages = [
      [u'Alessandro Ghedini'], 1)
 ]
 
-# If true, show URL addresses after
+# If true, show URL addresses after external links.
+#man_show_urls = False
