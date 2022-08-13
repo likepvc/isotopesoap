@@ -45,3 +45,37 @@ Skip to the previous track.
 Stop playback and clear tracklist.
 
 .. option:: add TRACK
+
+Append tracks to the player's tracklist. Tracks can be either files on the
+filesystem or other kinds of streams (e.g. HTTP streams, Youtube videos, ...).
+
+.. option:: [--append] load FILE
+
+Load a playlist file. The tracklist will be replaced with the content of the
+given playlist and playback stopped, unless `--append` is used.
+
+.. option:: save FILE
+
+Save the tracklist to a playlist file.
+
+.. option:: goto INDEX
+
+Skip to a specific track, identified by its index, in the tracklist.
+
+.. option:: rm INDEX
+
+Remove a track identified by its index in the tracklist, from the tracklist. The
+special value `-1` corresponds to the current track.
+
+.. option:: ls
+
+Show tracklist (the current track is marked with '*').
+
+.. option:: status
+
+Show the status of the player.
+
+.. option:: seek SECONDS
+
+Seek by the given amount of seconds relative to the current position. A negative
+value seeks backwards.
