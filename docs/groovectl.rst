@@ -79,3 +79,23 @@ Show the status of the player.
 
 Seek by the given amount of seconds relative to the current position. A negative
 value seeks backwards.
+
+.. option:: loop track|list|none|force
+
+Set the player's loop mode.
+
+.. option:: quit
+
+Shutdown the player.
+
+AUTHOR
+------
+
+Alessandro Ghedini <alessandro@ghedini.me>
+
+COPYRIGHT
+---------
+
+Copyright (C) 2014 Alessandro Ghedini <alessandro@ghedini.me>
+
+This program is released under the 2 clause BSD license.
