@@ -1,3 +1,9 @@
 .. _grooved(1):
 
-gr
+grooved
+=======
+
+SYNOPSIS
+--------
+
+.. program:: gr
