@@ -6,4 +6,8 @@ grooved
 SYNOPSIS
 --------
 
-.. program:: gr
+.. program:: grooved
+
+**grooved [options]**
+
+DESCRIPTI
