@@ -13,4 +13,4 @@ SYNOPSIS
 DESCRIPTION
 -----------
 
-**grooved** is a stupidly simple m
+**grooved** is a stupidly simple music player that runs as a daemon instead o
