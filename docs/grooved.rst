@@ -10,4 +10,7 @@ SYNOPSIS
 
 **grooved [options]**
 
-DESCRIPTI
+DESCRIPTION
+-----------
+
+**grooved** is a stupidly simple m
