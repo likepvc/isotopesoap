@@ -13,4 +13,5 @@ SYNOPSIS
 DESCRIPTION
 -----------
 
-**grooved** is a stupidly simple music player that runs as a daemon instead o
+**grooved** is a stupidly simple music player that runs as a daemon instead of
+showing a fancy GUI. I'm kinda lazy,
