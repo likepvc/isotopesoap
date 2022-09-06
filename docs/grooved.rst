@@ -22,4 +22,8 @@ beets instead of implementing yet another music database. Life gets so much
 better once you let other people do the hard work.
 
 OPTIONS
-----
+-------
+
+.. option:: -c, --config=<file>
+
+Specify the co
