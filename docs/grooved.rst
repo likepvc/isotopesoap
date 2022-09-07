@@ -26,4 +26,4 @@ OPTIONS
 
 .. option:: -c, --config=<file>
 
-Specify the co
+Specify the configuration file. (default: `~/.confi
