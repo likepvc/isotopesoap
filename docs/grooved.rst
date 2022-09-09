@@ -26,4 +26,6 @@ OPTIONS
 
 .. option:: -c, --config=<file>
 
-Specify the configuration file. (default: `~/.confi
+Specify the configuration file. (default: `~/.config/grooved/config.ini`)
+
+.. optio
