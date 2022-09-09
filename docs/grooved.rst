@@ -28,4 +28,6 @@ OPTIONS
 
 Specify the configuration file. (default: `~/.config/grooved/config.ini`)
 
-.. optio
+.. option:: --list-outputs
+
+List supported outputs.
