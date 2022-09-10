@@ -31,3 +31,7 @@ Specify the configuration file. (default: `~/.config/grooved/config.ini`)
 .. option:: --list-outputs
 
 List supported outputs.
+
+.. option:: -V, --verbose
+
+Enab
