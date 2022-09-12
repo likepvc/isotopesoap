@@ -34,4 +34,7 @@ List supported outputs.
 
 .. option:: -V, --verbose
 
-Enab
+Enable verbose log messages.
+
+CONFIG
+---
