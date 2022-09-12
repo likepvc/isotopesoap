@@ -37,4 +37,6 @@ List supported outputs.
 Enable verbose log messages.
 
 CONFIG
----
+------
+
+Here is a list of valid configuration o
