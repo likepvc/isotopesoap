@@ -39,4 +39,8 @@ Enable verbose log messages.
 CONFIG
 ------
 
-Here is a list of valid configuration o
+Here is a list of valid configuration options:
+
+.. option:: library=<path>
+
+T
