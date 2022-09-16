@@ -43,4 +43,6 @@ Here is a list of valid configuration options:
 
 .. option:: library=<path>
 
-T
+The path to beets' database.
+
+.. option:: not
