@@ -47,4 +47,6 @@ The path to beets' database.
 
 .. option:: notify=<yes|no>
 
-Send desktop notificati
+Send desktop notifications on track change.
+
+.. option:: verbose=<yes|
