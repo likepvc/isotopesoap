@@ -45,4 +45,6 @@ Here is a list of valid configuration options:
 
 The path to beets' database.
 
-.. option:: not
+.. option:: notify=<yes|no>
+
+Send desktop notificati
