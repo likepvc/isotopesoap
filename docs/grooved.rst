@@ -49,4 +49,6 @@ The path to beets' database.
 
 Send desktop notifications on track change.
 
-.. option:: verbose=<yes|
+.. option:: verbose=<yes|no>
+
+Whether to enable verbose output. (option
