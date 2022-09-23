@@ -51,4 +51,6 @@ Send desktop notifications on track change.
 
 .. option:: verbose=<yes|no>
 
-Whether to enable verbose output. (option
+Whether to enable verbose output. (optional)
+
+In addition to these options, g
