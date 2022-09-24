@@ -53,4 +53,4 @@ Send desktop notifications on track change.
 
 Whether to enable verbose output. (optional)
 
-In addition to these options, g
+In addition to these options, grooved will accept any option supported
