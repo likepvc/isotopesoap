@@ -55,4 +55,4 @@ Whether to enable verbose output. (optional)
 
 In addition to these options, grooved will accept any option supported by
 mpv itself (e.g. `ao`, `cache`, `gapless-audio`, `ytdl`, ...) but note that
-not all values
+not all values make sense as part of grooved
