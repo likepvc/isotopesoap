@@ -54,4 +54,5 @@ Send desktop notifications on track change.
 Whether to enable verbose output. (optional)
 
 In addition to these options, grooved will accept any option supported by
-mpv itself (e.g. `ao`, `cache`, `gapless-audio`
+mpv itself (e.g. `ao`, `cache`, `gapless-audio`, `ytdl`, ...) but note that
+not all values
