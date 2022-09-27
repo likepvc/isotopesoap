@@ -60,4 +60,4 @@ not all values make sense as part of grooved's configuration.
 AUTHOR
 ------
 
-Al
+Alessandro Ghedini <alessandro@ghedini.me>
