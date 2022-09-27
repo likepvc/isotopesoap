@@ -61,3 +61,8 @@ AUTHOR
 ------
 
 Alessandro Ghedini <alessandro@ghedini.me>
+
+COPYRIGHT
+---------
+
+Copyright (C) 
