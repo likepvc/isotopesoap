@@ -65,4 +65,6 @@ Alessandro Ghedini <alessandro@ghedini.me>
 COPYRIGHT
 ---------
 
-Copyright (C) 2014 Alessandro Ghedini <alessandro@
+Copyright (C) 2014 Alessandro Ghedini <alessandro@ghedini.me>
+
+This program is releas
