@@ -65,4 +65,4 @@ Alessandro Ghedini <alessandro@ghedini.me>
 COPYRIGHT
 ---------
 
-Copyright (C) 
+Copyright (C) 2014 Alessandro Ghedini <alessandro@
