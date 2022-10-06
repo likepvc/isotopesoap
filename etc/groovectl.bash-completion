@@ -4,4 +4,10 @@
 
 _groovectl() {
 	CMDS=(
-		"ad
+		"add"
+		"goto"
+		"ls"
+		"load"
+		"loop"
+		"next"
+		"pa
