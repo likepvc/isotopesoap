@@ -10,4 +10,7 @@ _groovectl() {
 		"load"
 		"loop"
 		"next"
-		"pa
+		"pause"
+		"play"
+		"prev"
+		"qu
