@@ -13,4 +13,9 @@ _groovectl() {
 		"pause"
 		"play"
 		"prev"
-		"qu
+		"quit"
+		"rm"
+		"save"
+		"seek"
+		"status"
+		"
