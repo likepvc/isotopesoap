@@ -18,4 +18,8 @@ _groovectl() {
 		"save"
 		"seek"
 		"status"
-		"
+		"stop"
+		"toggle"
+	)
+
+	local cur=${C
