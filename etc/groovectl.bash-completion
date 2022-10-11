@@ -22,4 +22,5 @@ _groovectl() {
 		"toggle"
 	)
 
-	local cur=${C
+	local cur=${COMP_WORDS[COMP_CWORD]}
+	COMPREPLY=( $(compge
