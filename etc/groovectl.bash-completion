@@ -25,4 +25,4 @@ _groovectl() {
 	local cur=${COMP_WORDS[COMP_CWORD]}
 	COMPREPLY=( $(compgen -W "${CMDS[*]}" -- $cur) )
 }
-complete -
+complete -F _groovectl groovectl
