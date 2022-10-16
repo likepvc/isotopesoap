@@ -5,4 +5,7 @@
 # This file is released under the 2 clause BSD license, see COPYING
 
 _arguments                      \
-  ':subcommand:-
+  ':subcommand:->subcommand'    \
+  '*:args:->args'
+
+case $state
