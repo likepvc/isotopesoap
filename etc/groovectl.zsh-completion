@@ -8,4 +8,7 @@ _arguments                      \
   ':subcommand:->subcommand'    \
   '*:args:->args'
 
-case $state
+case $state in
+  subcommand)
+    local -a subcommands
+    sub
