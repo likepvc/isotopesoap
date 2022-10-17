@@ -11,4 +11,5 @@ _arguments                      \
 case $state in
   subcommand)
     local -a subcommands
-    sub
+    subcommands=(
+      "add:append tracks to
