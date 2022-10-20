@@ -12,4 +12,5 @@ case $state in
   subcommand)
     local -a subcommands
     subcommands=(
-      "add:append tracks to
+      "add:append tracks to the player's tracklist"
+      "goto:skip to a 
