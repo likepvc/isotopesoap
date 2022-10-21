@@ -14,3 +14,5 @@ case $state in
     subcommands=(
       "add:append tracks to the player's tracklist"
       "goto:skip to a specific track in the tracklist"
+      "ls:show tracklist"
+      "load:load
