@@ -16,4 +16,5 @@ case $state in
       "goto:skip to a specific track in the tracklist"
       "ls:show tracklist"
       "load:load a playlist file"
-      "loop:set the 
+      "loop:set the player's loop mode"
+      "next:
