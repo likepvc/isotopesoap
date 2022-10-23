@@ -17,4 +17,5 @@ case $state in
       "ls:show tracklist"
       "load:load a playlist file"
       "loop:set the player's loop mode"
-      "next:
+      "next:skip to next track"
+      "pause:pause 
