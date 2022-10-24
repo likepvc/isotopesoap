@@ -18,4 +18,5 @@ case $state in
       "load:load a playlist file"
       "loop:set the player's loop mode"
       "next:skip to next track"
-      "pause:pause 
+      "pause:pause the player"
+      "play:unpause the player"
