@@ -20,3 +20,4 @@ case $state in
       "next:skip to next track"
       "pause:pause the player"
       "play:unpause the player"
+      "prev:skip to previous tra
