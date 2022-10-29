@@ -22,4 +22,4 @@ case $state in
       "play:unpause the player"
       "prev:skip to previous track"
       "quit:shutdown the player"
-      "rm:
+      "rm:remove a track from the tracklis
