@@ -23,4 +23,5 @@ case $state in
       "prev:skip to previous track"
       "quit:shutdown the player"
       "rm:remove a track from the tracklist"
-      "save:save the trackli
+      "save:save the tracklist to a playlist file"
+      "seek:seek by a
