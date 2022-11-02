@@ -25,4 +25,5 @@ case $state in
       "rm:remove a track from the tracklist"
       "save:save the tracklist to a playlist file"
       "seek:seek by a relative amount of seconds"
-      "status:show th
+      "status:show the status of the player"
+      "stop:stop playba
