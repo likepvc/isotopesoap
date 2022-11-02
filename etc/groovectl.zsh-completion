@@ -24,4 +24,5 @@ case $state in
       "quit:shutdown the player"
       "rm:remove a track from the tracklist"
       "save:save the tracklist to a playlist file"
-      "seek:seek by a
+      "seek:seek by a relative amount of seconds"
+      "status:show th
