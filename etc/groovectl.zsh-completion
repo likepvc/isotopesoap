@@ -26,4 +26,5 @@ case $state in
       "save:save the tracklist to a playlist file"
       "seek:seek by a relative amount of seconds"
       "status:show the status of the player"
-      "stop:stop playba
+      "stop:stop playback and clear tracklist"
+      "toggle:t
