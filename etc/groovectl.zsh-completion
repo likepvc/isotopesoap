@@ -27,4 +27,7 @@ case $state in
       "seek:seek by a relative amount of seconds"
       "status:show the status of the player"
       "stop:stop playback and clear tracklist"
-      "toggle:t
+      "toggle:toggle the player's pause status"
+    )
+
+    _describe -t s
