@@ -30,4 +30,4 @@ case $state in
       "toggle:toggle the player's pause status"
     )
 
-    _describe -t s
+    _describe -t subcommands 'groovectl subcommand' subcomman
