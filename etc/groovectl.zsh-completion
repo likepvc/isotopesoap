@@ -43,4 +43,6 @@ case $state in
         _files
       ;;
 
-      l
+      loop)
+        local -a values
+        values=
