@@ -39,4 +39,8 @@ case $state in
         _files
       ;;
 
-  
+      load)
+        _files
+      ;;
+
+      l
