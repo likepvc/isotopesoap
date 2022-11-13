@@ -45,4 +45,5 @@ case $state in
 
       loop)
         local -a values
-        values=
+        values=(
+          "track:loop current tr
