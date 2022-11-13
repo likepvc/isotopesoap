@@ -46,4 +46,5 @@ case $state in
       loop)
         local -a values
         values=(
-          "track:loop current tr
+          "track:loop current track"
+          "list:loop whole tracklis
