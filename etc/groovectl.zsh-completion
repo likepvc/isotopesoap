@@ -49,4 +49,4 @@ case $state in
           "track:loop current track"
           "list:loop whole tracklist"
           "none:disable looping"
-     
+          "force:loop whole tracklist with
