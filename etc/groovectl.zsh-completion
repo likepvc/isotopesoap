@@ -47,4 +47,6 @@ case $state in
         local -a values
         values=(
           "track:loop current track"
-          "list:loop whole tracklis
+          "list:loop whole tracklist"
+          "none:disable looping"
+     
