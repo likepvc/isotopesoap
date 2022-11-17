@@ -51,3 +51,5 @@ case $state in
           "none:disable looping"
           "force:loop whole tracklist without skipping failing entries"
         )
+
+        _describe -t values 'groovectl l
