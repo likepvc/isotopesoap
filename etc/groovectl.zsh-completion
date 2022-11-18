@@ -56,3 +56,8 @@ case $state in
       ;;
 
       save)
+        _files
+      ;;
+    esac
+  ;;
+esac
