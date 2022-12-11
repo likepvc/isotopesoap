@@ -1,2 +1,4 @@
 /*
- * Gro
+ * Groovy music player daemon.
+ *
+ * Copyr
