@@ -1,4 +1,4 @@
 /*
  * Groovy music player daemon.
  *
- * Copyr
+ * Copyright (c) 2014, Alessandro Ghedini
