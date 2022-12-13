@@ -4,4 +4,4 @@
  * Copyright (c) 2014, Alessandro Ghedini
  * All rights reserved.
  *
- * Redis
+ * Redistribution and use in source and binary forms, wi
