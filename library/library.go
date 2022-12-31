@@ -16,4 +16,4 @@
  *       documentation and/or other materials provided with the distribution.
  *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
- * IS" AND ANY EXPRESS OR I
+ * IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT N
