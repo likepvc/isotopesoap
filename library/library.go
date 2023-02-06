@@ -33,4 +33,6 @@ package library
 import "fmt"
 
 import "database/sql"
-import _ "github
+import _ "github.com/mattn/go-sqlite3"
+
+const random_query = 
