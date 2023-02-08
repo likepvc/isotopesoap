@@ -40,3 +40,4 @@ const random_query = "SELECT path FROM items ORDER BY RANDOM() LIMIT 1"
 func Random(library string) (string, error) {
     db, err := sql.Open("sqlite3", library)
     if err != nil {
+        return "", fmt.Errorf("Could not
