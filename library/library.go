@@ -37,4 +37,5 @@ import _ "github.com/mattn/go-sqlite3"
 
 const random_query = "SELECT path FROM items ORDER BY RANDOM() LIMIT 1"
 
-func Random(library string) (s
+func Random(library string) (string, error) {
+    db, err := sql.Open("sqli
