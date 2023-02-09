@@ -42,4 +42,6 @@ func Random(library string) (string, error) {
     if err != nil {
         return "", fmt.Errorf("Could not open library: %s", err)
     }
-    de
+    defer db.Close()
+
+    rows, err := db.Query(rand
