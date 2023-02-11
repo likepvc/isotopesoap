@@ -46,4 +46,5 @@ func Random(library string) (string, error) {
 
     rows, err := db.Query(random_query)
     if err != nil {
-        return "", fmt.Error
+        return "", fmt.Errorf("Could not execute query: %s", err)
+ 
