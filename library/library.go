@@ -50,4 +50,6 @@ func Random(library string) (string, error) {
     }
     defer rows.Close()
 
-    for rows.N
+    for rows.Next() {
+        var path string
+      
