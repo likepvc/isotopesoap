@@ -44,4 +44,6 @@ func Random(library string) (string, error) {
     }
     defer db.Close()
 
-    rows, err := db.Query(rand
+    rows, err := db.Query(random_query)
+    if err != nil {
+        return "", fmt.Error
