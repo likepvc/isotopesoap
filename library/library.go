@@ -52,4 +52,7 @@ func Random(library string) (string, error) {
 
     for rows.Next() {
         var path string
-      
+        rows.Scan(&path)
+
+        return path, nil
+    }
