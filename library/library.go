@@ -58,4 +58,5 @@ func Random(library string) (string, error) {
     }
     rows.Close()
 
-    return "", fmt
+    return "", fmt.Errorf("Empty database")
+}
