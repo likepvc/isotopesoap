@@ -56,3 +56,6 @@ func Random(library string) (string, error) {
 
         return path, nil
     }
+    rows.Close()
+
+    return "", fmt
