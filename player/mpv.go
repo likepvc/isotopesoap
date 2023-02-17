@@ -61,3 +61,37 @@ package player
 import "C"
 
 import "fmt"
+import "unsafe"
+
+const (
+    FormatNone      C.mpv_format = 0
+    FormatString                 = 1
+    FormatFlag                   = 3
+    FormatInt64                  = 4
+    FormatDouble                 = 5
+    FormatNode                   = 6
+    FormatNodeArray              = 7
+    FormatNodeMap                = 8
+)
+
+func ErrorString(err C.int) error {
+    err_str := C.mpv_error_string(err)
+    return fmt.Errorf(C.GoString(err_str))
+}
+
+func (p *Player) SetOptionString(name string, value string) error {
+    cname := C.CString(name)
+    defer C.free(unsafe.Pointer(cname))
+
+    cvalue := C.CString(value)
+    defer C.free(unsafe.Pointer(cvalue))
+
+    err := C.mpv_set_option_string(p.handle, cname, cvalue)
+    if err != 0 {
+        return ErrorString(err)
+    }
+
+    return nil
+}
+
+func (p *Player) SetProperty(name string, value interface{}) error {
