@@ -17,3 +17,47 @@
  *       documentation and/or other materials provided with the distribution.
  *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+ * IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+package player
+
+// #cgo pkg-config: mpv
+// #include <stdlib.h>
+// #include <mpv/client.h>
+//
+// char **alloc_array(int size) {
+//     return calloc(sizeof(char*), size);
+// }
+//
+// void set_array(char **a, int i, char* s) {
+//     a[i] = s;
+// }
+//
+// int64_t node_get_int64(mpv_node *node) { return node -> u.int64; }
+// double  node_get_double(mpv_node *node) { return node -> u.double_; }
+// char   *node_get_string(mpv_node *node) { return node -> u.string; }
+//
+// int64_t node_get_map_len(mpv_node *node) {
+//     return node -> u.list -> num;
+// }
+//
+// char *node_get_map_key(mpv_node *node, int64_t i) {
+//   return node -> u.list -> keys[i];
+// }
+//
+// mpv_node *node_get_map_val(mpv_node *node, int64_t i) {
+//   return &node -> u.list -> values[i];
+// }
+import "C"
+
+import "fmt"
