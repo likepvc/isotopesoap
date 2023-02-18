@@ -148,3 +148,49 @@ func (p *Player) GetProperty(name string) (interface{}, error) {
     defer C.mpv_free_node_contents(&node)
 
     return node_to_go(&node)
+}
+
+func (p *Player) ObserveProperty(name string, fmt C.mpv_format) error {
+    cname := C.CString(name)
+    defer C.free(unsafe.Pointer(cname))
+
+    err := C.mpv_observe_property(p.handle, 0, cname, fmt)
+    if err != 0 {
+        return ErrorString(err)
+    }
+
+    return nil
+}
+
+func (p *Player) Command(command []string) error {
+    carray := C.alloc_array(C.int(len(command) + 1))
+    if carray == nil {
+        return fmt.Errorf("Could not allocate array")
+    }
+    defer C.free(unsafe.Pointer(carray))
+
+    for i, s := range command {
+        cstr := C.CString(s)
+        defer C.free(unsafe.Pointer(cstr))
+
+        C.set_array(carray, C.int(i), cstr)
+    }
+
+    err := C.mpv_command(p.handle, carray)
+    if err != 0 {
+        return ErrorString(err)
+    }
+
+    return nil
+}
+
+func node_to_go(node *C.mpv_node) (interface{}, error) {
+    switch node.format {
+    case FormatFlag:
+        if C.node_get_int64(node) != 0 {
+            return true, nil
+        } else {
+            return false, nil
+        }
+
+    case FormatInt64:
