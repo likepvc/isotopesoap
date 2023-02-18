@@ -194,3 +194,39 @@ func node_to_go(node *C.mpv_node) (interface{}, error) {
         }
 
     case FormatInt64:
+        value := C.node_get_int64(node)
+        return int64(value), nil
+
+    case FormatDouble:
+        value := C.node_get_double(node)
+        return float64(value), nil
+
+    case FormatString:
+        value := C.node_get_string(node)
+        return C.GoString(value), nil
+
+    case FormatNodeArray:
+        var value []interface{}
+
+        for i := C.int64_t(0); i < C.node_get_map_len(node); i++ {
+            cval := C.node_get_map_val(node, i)
+
+            val, _ := node_to_go(cval)
+
+            value = append(value, val)
+        }
+
+        return value, nil
+
+    case FormatNodeMap:
+        value := map[string]interface{}{}
+
+        for i := C.int64_t(0); i < C.node_get_map_len(node); i++ {
+            ckey := C.node_get_map_key(node, i)
+            cval := C.node_get_map_val(node, i)
+
+            key := C.GoString(ckey)
+            val, _ := node_to_go(cval)
+
+            value[key] = val
+        }
