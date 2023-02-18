@@ -95,3 +95,56 @@ func (p *Player) SetOptionString(name string, value string) error {
 }
 
 func (p *Player) SetProperty(name string, value interface{}) error {
+    var data unsafe.Pointer
+    var format C.mpv_format
+
+    cname := C.CString(name)
+    defer C.free(unsafe.Pointer(cname))
+
+    switch value.(type) {
+    case bool:
+        format  = FormatFlag
+        cvalue := value.(bool)
+        data    = unsafe.Pointer(&cvalue)
+
+    case int64:
+        format  = FormatInt64
+        cvalue := value.(int64)
+        data    = unsafe.Pointer(&cvalue)
+
+    case float64:
+        format  = FormatDouble
+        cvalue := value.(float64)
+        data    = unsafe.Pointer(&cvalue)
+
+    case string:
+        format  = FormatString
+        cvalue := C.CString(value.(string))
+        data    = unsafe.Pointer(&cvalue)
+
+        defer C.free(unsafe.Pointer(cvalue))
+    }
+
+    err := C.mpv_set_property(p.handle, cname, format, data)
+    if err != 0 {
+        return ErrorString(err)
+    }
+
+    return nil
+}
+
+func (p *Player) GetProperty(name string) (interface{}, error) {
+    var node C.mpv_node
+
+    cname := C.CString(name)
+    defer C.free(unsafe.Pointer(cname))
+
+    err := C.mpv_get_property(
+        p.handle, cname, FormatNode, unsafe.Pointer(&node),
+    )
+    if err != 0 {
+        return nil, ErrorString(err)
+    }
+    defer C.mpv_free_node_contents(&node)
+
+    return node_to_go(&node)
