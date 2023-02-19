@@ -230,3 +230,9 @@ func node_to_go(node *C.mpv_node) (interface{}, error) {
 
             value[key] = val
         }
+
+        return value, nil
+    }
+
+    return nil, fmt.Errorf("Unsupported type")
+}
