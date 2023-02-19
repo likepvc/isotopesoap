@@ -65,3 +65,28 @@ func (s Status) String() string {
 
     case StatusStopped:
         return "stop"
+    }
+
+    return "invalid"
+}
+
+type Player struct {
+    handle *C.mpv_handle
+    Status Status
+
+    library string
+    notify  bool
+    started bool
+
+    Verbose bool
+
+    HandleStatusChange func()
+    HandleTrackChange  func()
+    HandleTracksChange func()
+    HandleVolumeChange func()
+
+    Wait sync.WaitGroup
+}
+
+func (p *Player) ChangeStatus(status Status) {
+    p.Status = status
