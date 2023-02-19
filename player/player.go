@@ -26,3 +26,42 @@
  * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+package player
+
+// #cgo pkg-config: mpv
+// #include <mpv/client.h>
+import "C"
+
+import "fmt"
+import "log"
+import "strconv"
+import "sync"
+
+import "github.com/vaughan0/go-ini"
+
+import "github.com/ghedo/grooved/library"
+import "github.com/ghedo/grooved/notify"
+import "github.com/ghedo/grooved/util"
+
+type Event byte
+type Status byte
+
+const (
+    StatusPlaying Status = iota
+    StatusPaused
+    StatusStopped
+)
+
+func (s Status) String() string {
+    switch s {
+    case StatusPlaying:
+        return "play"
+
+    case StatusPaused:
+        return "pause"
+
+    case StatusStopped:
+        return "stop"
