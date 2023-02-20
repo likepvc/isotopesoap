@@ -90,3 +90,50 @@ type Player struct {
 
 func (p *Player) ChangeStatus(status Status) {
     p.Status = status
+    p.HandleStatusChange()
+}
+
+func (p *Player) Play() error {
+    switch p.Status {
+    case StatusPlaying:
+        return nil
+
+    case StatusStopped:
+        count, err := p.GetProperty("playlist-count")
+        if err == nil && count.(int64) > 0 {
+            return p.GotoTrack(0)
+        }
+
+        p.AddTrack("", true)
+        fallthrough
+
+    case StatusPaused:
+        return p.SetProperty("pause", "no")
+    }
+
+    return fmt.Errorf("Invalid player state")
+}
+
+func (p *Player) Pause() error {
+    switch p.Status {
+    case StatusPaused, StatusStopped:
+        return nil
+
+    case StatusPlaying:
+        return p.SetProperty("pause", "yes")
+    }
+
+    return fmt.Errorf("Invalid player state")
+}
+
+func (p *Player) Toggle() error {
+    switch p.Status {
+    case StatusPaused, StatusStopped:
+        return p.Play()
+
+    case StatusPlaying:
+        return p.Pause()
+    }
+
+    return fmt.Errorf("Invalid player state")
+}
