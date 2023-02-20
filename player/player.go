@@ -137,3 +137,49 @@ func (p *Player) Toggle() error {
 
     return fmt.Errorf("Invalid player state")
 }
+
+func (p *Player) Next() error {
+    return p.Command([]string{"playlist_next", "force"})
+}
+
+func (p *Player) Prev() error {
+    return p.Command([]string{"playlist_prev", "weak"})
+}
+
+func (p *Player) Stop() error {
+    err := p.Command([]string{"stop"})
+
+    p.ChangeStatus(StatusStopped)
+    p.HandleTrackChange()
+
+    return err
+}
+
+func (p *Player) Seek(seconds int64) error {
+    secs := strconv.FormatInt(seconds, 10)
+    return p.Command([]string{"seek", secs})
+}
+
+func (p *Player) List() ([]string, error) {
+    playlist, err := p.GetProperty("playlist")
+    if err != nil {
+        return nil, nil
+    }
+
+    var files []string
+
+    for _, entry := range playlist.([]interface{}) {
+        if entry == nil {
+            continue
+        }
+
+        entry_map := entry.(map[string]interface{})
+
+        files = append(files, entry_map["filename"].(string))
+    }
+
+    return files, nil
+}
+
+func (p *Player) AddTrack(path string, play bool) error {
+    var mode string
