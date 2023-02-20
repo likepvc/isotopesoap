@@ -183,3 +183,43 @@ func (p *Player) List() ([]string, error) {
 
 func (p *Player) AddTrack(path string, play bool) error {
     var mode string
+
+    if play {
+        mode = "append-play"
+    } else {
+        mode = "append"
+    }
+
+    if path == "" {
+        var err error
+
+        path, err = library.Random(p.library)
+        if err != nil {
+            return fmt.Errorf("Could not get random track: %s", err)
+        }
+    }
+
+    return p.Command([]string{"loadfile", path, mode})
+}
+
+func (p *Player) AddList(path string) error {
+    return p.Command([]string{"loadlist", path, "append"})
+}
+
+func (p *Player) GotoTrack(index int64) error {
+    return p.SetProperty("playlist-pos", index)
+}
+
+func (p *Player) RemoveTrack(index int64) error {
+    var track string
+
+    if index < 0 {
+        track = "current"
+    } else {
+        track = strconv.FormatInt(index, 10)
+    }
+
+    return p.Command([]string{"playlist_remove", track})
+}
+
+func (p *Player) Quit() error {
