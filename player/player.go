@@ -260,3 +260,50 @@ func (p *Player) GetTrackPath() (string, error) {
 }
 
 func (p *Player) GetTrackPosition(percent bool) (float64, error) {
+    var err error
+    var pos interface{}
+
+    if !percent {
+        pos, err = p.GetProperty("time-pos")
+    } else {
+        pos, err = p.GetProperty("percent-pos")
+    }
+
+    if err != nil {
+        return 0.0, err
+    }
+
+    return pos.(float64), nil
+}
+
+func (p *Player) GetTrackTitle() (string, error) {
+    title, err := p.GetProperty("media-title")
+    if err != nil {
+        return "", nil
+    }
+
+    metadata, err := p.GetTrackMetadata()
+    if err != nil {
+        return title.(string), nil
+    }
+
+    artist := metadata["artist"]
+    if artist == "" {
+        artist = metadata["ARTIST"]
+    }
+
+    if artist != "" {
+        return fmt.Sprintf("%s - %s", artist, title.(string)), nil
+    }
+
+    return title.(string), nil
+}
+
+func (p *Player) SetLoopStatus(mode string) error {
+    switch mode {
+    case "none":
+        p.SetProperty("loop-file", false)
+        p.SetProperty("loop", "no")
+
+    case "track":
+        p.SetLoopStatus("none")
