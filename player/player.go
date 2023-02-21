@@ -223,3 +223,40 @@ func (p *Player) RemoveTrack(index int64) error {
 }
 
 func (p *Player) Quit() error {
+    return p.Command([]string{"quit"})
+}
+
+func (p *Player) GetTrackMetadata() (map[string]string, error) {
+    metadata, err := p.GetProperty("metadata")
+    if err != nil {
+        return nil, err
+    }
+
+    metadata_str := map[string]string{}
+
+    for key, val := range metadata.(map[string]interface{}) {
+        metadata_str[key] = val.(string)
+    }
+
+    return metadata_str, err
+}
+
+func (p *Player) GetTrackLength() (float64, error) {
+    length, err := p.GetProperty("length")
+    if err != nil {
+        return 0.0, err
+    }
+
+    return length.(float64), nil
+}
+
+func (p *Player) GetTrackPath() (string, error) {
+    path, err := p.GetProperty("path")
+    if err != nil {
+        return "", err
+    }
+
+    return path.(string), nil
+}
+
+func (p *Player) GetTrackPosition(percent bool) (float64, error) {
