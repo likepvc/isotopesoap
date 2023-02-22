@@ -307,3 +307,48 @@ func (p *Player) SetLoopStatus(mode string) error {
 
     case "track":
         p.SetLoopStatus("none")
+        p.SetProperty("loop-file", true)
+
+    case "list":
+        p.SetLoopStatus("none")
+        p.SetProperty("loop", "inf")
+
+    case "force":
+        p.SetLoopStatus("none")
+        p.SetProperty("loop", "force")
+
+    default:
+        return fmt.Errorf("Invalid mode")
+    }
+
+    return nil
+}
+
+func (p *Player) GetOutputList() ([]string, error) {
+    outputs, err := p.GetProperty("option-info/ao/choices")
+    if err != nil {
+        return nil, err
+    }
+
+    outs := []string{}
+    for _, output := range outputs.([]interface{}) {
+        outs = append(outs, output.(string))
+    }
+
+    return outs, nil
+}
+
+func Init(cfg ini.File) (*Player, error) {
+    p := &Player{
+        Status:  StatusStopped,
+        started: false,
+    }
+
+    p.handle = C.mpv_create()
+    if p.handle == nil {
+        return nil, fmt.Errorf("Could not create player")
+    }
+
+    cfg_map := map[string]string {
+        "audio-client-name": "grooved",
+        "title":             "${?media-title:${media-title}}${!media-title:No file.}",
