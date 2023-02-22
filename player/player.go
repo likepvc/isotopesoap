@@ -352,3 +352,36 @@ func Init(cfg ini.File) (*Player, error) {
     cfg_map := map[string]string {
         "audio-client-name": "grooved",
         "title":             "${?media-title:${media-title}}${!media-title:No file.}",
+        "config":            "no",
+        "sub":               "no",
+        "video":             "no",
+    }
+
+    for k, v := range cfg["default"] {
+        cfg_map[k] = v
+    }
+
+    var err error
+    for k, v := range cfg_map {
+        switch (k) {
+        case "filters":
+            /* skip */
+
+        case "library":
+            p.library, err = util.ExpandUser(cfg["default"]["library"])
+            if err != nil {
+                return nil, fmt.Errorf("Could not set option '%s': %s", k, err)
+            }
+
+        case "notify":
+            if v == "yes" {
+                p.notify = true
+            }
+
+        case "verbose":
+            p.Verbose = true
+
+        default:
+            err = p.SetOptionString(k, v)
+            if err != nil {
+                return nil, fmt.Errorf("Could not set option '%s': %s", k, err)
