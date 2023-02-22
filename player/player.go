@@ -418,3 +418,47 @@ func (p *Player) HandlePauseChange() {
 
     pause, err := p.GetProperty("pause")
     if err != nil {
+        return
+    }
+
+    if pause.(bool) {
+        p.ChangeStatus(StatusPaused)
+    } else {
+        p.ChangeStatus(StatusPlaying)
+    }
+}
+
+func (p *Player) HandleMetadataChange() {
+    if !p.started {
+        return
+    }
+
+    if p.notify {
+        msg, _ := p.GetTrackTitle()
+        notify.Notify("Now Playing:", msg, "media-playback-start")
+    }
+
+    p.HandleTrackChange()
+}
+
+func (p *Player) EventLoop() {
+    p.ObserveProperty("pause",    FormatFlag)
+    p.ObserveProperty("metadata", FormatNode)
+    p.ObserveProperty("playlist", FormatNode)
+    p.ObserveProperty("volume", FormatNode)
+
+    for {
+        ev := C.mpv_wait_event(p.handle, -1)
+        ev_name := C.GoString(C.mpv_event_name(ev.event_id))
+
+        if p.Verbose {
+            log.Printf("Event %s\n", ev_name)
+        }
+
+        switch ev_name {
+        case "idle":
+            if p.Status == StatusStopped {
+                break
+            }
+
+            err := p.AddTrack("", true)
