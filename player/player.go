@@ -385,3 +385,36 @@ func Init(cfg ini.File) (*Player, error) {
             err = p.SetOptionString(k, v)
             if err != nil {
                 return nil, fmt.Errorf("Could not set option '%s': %s", k, err)
+            }
+        }
+    }
+
+    if cfg["default"]["filters"] != "" {
+        p.SetOptionString("af", cfg["default"]["filters"])
+    }
+
+    C.mpv_request_log_messages(p.handle, C.CString("warn"))
+
+    mp_err := C.mpv_initialize(p.handle)
+    if mp_err != 0 {
+        return nil, ErrorString(mp_err)
+    }
+
+    return p, nil
+}
+
+func (p *Player) Run() error {
+    p.Wait.Add(1)
+
+    go p.EventLoop()
+
+    return nil
+}
+
+func (p *Player) HandlePauseChange() {
+    if !p.started {
+        return
+    }
+
+    pause, err := p.GetProperty("pause")
+    if err != nil {
