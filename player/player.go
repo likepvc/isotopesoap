@@ -500,3 +500,13 @@ func (p *Player) EventLoop() {
         case "log-message":
             mp_log := (*C.mpv_event_log_message)(ev.data)
             log.Printf("%s: %s: %s",
+                       C.GoString(mp_log.level),
+                       C.GoString(mp_log.prefix),
+                       C.GoString(mp_log.text))
+
+        case "shutdown":
+            p.Wait.Done()
+            return
+        }
+    }
+}
