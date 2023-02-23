@@ -462,3 +462,41 @@ func (p *Player) EventLoop() {
             }
 
             err := p.AddTrack("", true)
+            if err != nil {
+                log.Printf("Could not add track: %s\n", err)
+                p.ChangeStatus(StatusStopped)
+            }
+
+        case "start-file":
+            p.started = true
+            p.HandlePauseChange()
+
+        case "property-change":
+            prop := (*C.mpv_event_property)(ev.data)
+            prop_name := C.GoString(prop.name)
+
+            if prop.format == FormatNone {
+                break
+            }
+
+            if p.Verbose {
+                log.Printf("Property %s\n", prop_name)
+            }
+
+            switch prop_name {
+            case "pause":
+                p.HandlePauseChange()
+
+            case "metadata":
+                p.HandleMetadataChange()
+
+            case "playlist":
+                p.HandleTracksChange()
+
+            case "volume":
+                p.HandleVolumeChange()
+            }
+
+        case "log-message":
+            mp_log := (*C.mpv_event_log_message)(ev.data)
+            log.Printf("%s: %s: %s",
