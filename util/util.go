@@ -8,4 +8,4 @@
  * modification, are permitted provided that the following conditions are
  * met:
  *
- *     * Redistributio
+ *     * Redistributions of source code must retain the 
