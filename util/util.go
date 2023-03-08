@@ -12,4 +12,4 @@
  *       notice, this list of conditions and the following disclaimer.
  *
  *     * Redistributions in binary form must reproduce the above copyright
- *       not
+ *       notice, this list of conditions and the following 
