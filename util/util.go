@@ -34,4 +34,5 @@ import "fmt"
 import "os/user"
 import "strings"
 
-func ExpandUser(path string) (str
+func ExpandUser(path string) (string, error) {
+    user, err := 
