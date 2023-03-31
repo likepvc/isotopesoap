@@ -35,4 +35,6 @@ import "os/user"
 import "strings"
 
 func ExpandUser(path string) (string, error) {
-    user, err := 
+    user, err := user.Current()
+    if err != nil {
+     
