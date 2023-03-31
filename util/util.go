@@ -32,4 +32,6 @@ package util
 
 import "fmt"
 import "os/user"
-import "str
+import "strings"
+
+func ExpandUser(path string) (str
