@@ -37,4 +37,7 @@ import "strings"
 func ExpandUser(path string) (string, error) {
     user, err := user.Current()
     if err != nil {
-        return "", fmt.Errorf("Could not find cur
+        return "", fmt.Errorf("Could not find current user: %s", err)
+    }
+
+    if strings.H
