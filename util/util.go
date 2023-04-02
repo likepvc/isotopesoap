@@ -41,4 +41,8 @@ func ExpandUser(path string) (string, error) {
     }
 
     if strings.HasPrefix(path, "~/") {
-        return strings.Replace(path, "~", user.HomeDir
+        return strings.Replace(path, "~", user.HomeDir, 1), nil
+    }
+
+    return path, nil
+}
