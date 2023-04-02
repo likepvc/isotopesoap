@@ -40,4 +40,5 @@ func ExpandUser(path string) (string, error) {
         return "", fmt.Errorf("Could not find current user: %s", err)
     }
 
-    if strings.H
+    if strings.HasPrefix(path, "~/") {
+        return strin
